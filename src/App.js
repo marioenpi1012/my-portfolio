@@ -3,7 +3,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Body from './components/Body'
 import Projects from './components/Projects'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {HashRouter as Router, Route,} from 'react-router-dom'
 
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
     <Router>
       <div className="App">
         <Navbar  />
-        <Route path='/' exact> <Body /> <Projects />  </Route>
-        <Route path='/about'  component={About} />
-        <Route path='/contact' component={Contact} />
+        <Route path="/" exact> <Body /> <Projects />  </Route>
+        <Route path='/about'   component={About} />
+        <Route path='/contact'  component={Contact} />
       </div>
     </Router>
     
