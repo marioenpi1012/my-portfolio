@@ -122,6 +122,7 @@ a{
 .project .image{
   margin: 25px 0px;
   width: 100%;
+  max-height: 316px;
   padding: 0 25px;
 }
 .project .description{
@@ -174,7 +175,7 @@ a{
   .project{
     width:100%;
     margin: 0 5px;
-    height: unset;
+    height: 336px;
 
   }
   #container{
@@ -184,8 +185,12 @@ a{
     margin: 0px;
     padding: 10px 0;
     width: 382px;
+    height: 218px;
   }
   .btns{
-    transform: translate(153px, -328px);
+    display: none;
+    width: fit-content;
+    position: relative;
+    transform: translate(130px, -250px);
   }
 }

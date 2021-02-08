@@ -7,7 +7,7 @@ import {HashRouter as Router, Route,} from 'react-router-dom'
 
 
 function App() {
-  
+  <title>Hello</title>
   return (
     <Router>
       <div className="App">

@@ -44,7 +44,7 @@ const Project = () => {
     const projectInfo = projectsInfo.map((project) =>{
         return(
             <div className="project" key={project.id}>
-                <div id='container'>
+                <div id='container' >
                     <div className="title"> <h3>{project.title}</h3></div>
                     <img className="image" src={project.image} alt=""/>
                     <div className="description">
