@@ -112,13 +112,12 @@ a{
   transform: translate(247px, -343px);
 }
 .btns button{
-  z-index: 10000;
   padding: 10px;
   margin: 10px 0;
   font-weight: 600;
   background-color: #FAFAFA;
   color:#32333A;
-  filter: brightness(100%);
+  border-radius: 5px;
 }
 .project .image{
   margin: 25px 0px;

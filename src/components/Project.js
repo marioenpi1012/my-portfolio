@@ -52,8 +52,8 @@ const Project = () => {
                     </div>
                 </div>
                 <div className="btns">
-                    <button onClick={() => window.location.href=project.code}>Code</button>
-                    <button onClick={() => window.location.href=project.liveWebsite}>Live Website</button>
+                    <button onClick={() => window.open(project.code)}>Code</button>
+                    <button onClick={() => window.open(project.liveWebsite)}>Live Website</button>
                 </div>
             </div>
             
