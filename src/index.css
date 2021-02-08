@@ -83,17 +83,18 @@ a{
 }
 .hover{
   transition: ease-in-out 1s;
+  background-color: #32333A;
   filter: brightness(10%);
-  background: #32333A;
 }
 .btn-display{
   display: flex !important;
 }
 .project{
+  display: block;
   width: 618px;
   height: 513px;
   background-color: rgba(247, 246, 246, 1);
-  /* margin: 25px 49px; */
+  margin: 25px;
 }
 .project .title{
   text-align: center;
@@ -111,7 +112,6 @@ a{
   transform: translate(247px, -343px);
 }
 .btns button{
-  pointer-events: none;
   z-index: 10000;
   padding: 10px;
   margin: 10px 0;
@@ -121,9 +121,9 @@ a{
   filter: brightness(100%);
 }
 .project .image{
-  margin: 25px 18px;
-  width: 567px;
-  height: 313px;
+  margin: 25px 0px;
+  width: 100%;
+  padding: 0 25px;
 }
 .project .description{
   text-align: center;
@@ -167,13 +167,15 @@ a{
     background-image: url('./images/phone-background.jpg');
   }
   .projects{
-    flex-wrap: nowrap;
+    flex-wrap: revert;
     justify-content: space-between;
-    margin: 0;
+    margin: 0 10px;
     overflow-x: scroll;
   }
   .project{
-    width: 100%;
+    width:100%;
+    margin: 0 5px;
+    height: unset;
 
   }
   #container{
@@ -182,6 +184,9 @@ a{
   .project .image{
     margin: 0px;
     padding: 10px 0;
-    width: unset;
+    width: 382px;
+  }
+  .btns{
+    transform: translate(153px, -328px);
   }
 }
