@@ -38,6 +38,10 @@ a{
   list-style: none;
 
 }
+.currentLocation{
+  color: rgb(68, 67, 67) !important;
+  border-bottom:1px solid #616060;
+  }
 
 #body{
   display: block;
@@ -130,6 +134,25 @@ a{
   margin: 0 39px;
   width: 80%;
 }
+/* Contact Component */
+.contactForm{
+  text-align: center;
+  margin: 5% 0 ;
+}
+.contactForm #formTitle{
+  margin: 10px 0;
+  border-bottom: 1px solid #32333A;
+}
+#form{
+  display: inline-grid;
+  width: 50%;
+}
+#form input, #form textarea{
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0;
+}
+
 @media only screen and (max-width:600px){
   body{
     padding: 0;
@@ -169,7 +192,7 @@ a{
   .projects{
     flex-wrap: revert;
     justify-content: space-between;
-    margin: 0 10px;
+    margin: 5px 10px;
     overflow-x: scroll;
   }
   .project{
@@ -193,4 +216,5 @@ a{
     position: relative;
     transform: translate(130px, -250px);
   }
+  
 }

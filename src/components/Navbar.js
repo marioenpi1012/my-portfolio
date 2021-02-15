@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link}  from 'react-router-dom'
+import {NavLink}  from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import {useState} from 'react'
 const Navbar = () => {
@@ -22,24 +22,21 @@ const Navbar = () => {
     return (
         <nav className='navbar'>
             <div className='left-nav'>
-                <Link to='/'>
+                <NavLink to='/' >
                     <div id='name'>
                         Mario Pineda
                     </div> 
-                </Link>
-                <div onClick={onClick} id='phone-nav' value='false'>
+                </NavLink>
+                <div onClick={onClick} id='phone-nav' value='false' >
                     {close ?(<FaBars/>):(<FaTimes/>) }
                 </div>
             </div>
             
             <div className='nav-links' >
                 <ul>
-                    <Link to='/about'>
-                        <li>About</li>
-                    </Link>
-                    <Link to='/contact'>
-                        <li>Contact Me</li>
-                    </Link>
+                    <li> <NavLink to='/about'  activeClassName='currentLocation'>About</NavLink></li>
+                    <li> <NavLink to='/contact' activeClassName='currentLocation'>Contact Me</NavLink></li>
+                    
                 </ul>
             </div>
         </nav>

@@ -4,12 +4,15 @@ import Contact from './components/Contact'
 import Body from './components/Body'
 import Projects from './components/Projects'
 import {HashRouter as Router, Route,} from 'react-router-dom'
-
+import {Helmet} from 'react-helmet'
 
 function App() {
-  <title>Hello</title>
   return (
+
     <Router>
+      <Helmet>
+        <title>My Portfolio</title>
+      </Helmet>
       <div className="App">
         <Navbar  />
         <Route path="/" exact> <Body /> <Projects />  </Route>

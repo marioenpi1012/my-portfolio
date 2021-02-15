@@ -2,8 +2,6 @@ import todoImg from '../images/desktop-design-dark.jpg'
 import InsureLPImg from '../images/desktop-preview.jpg'
 
 const Project = () => {
-    const projectsDiv = document.querySelector('.projects')
-    const allProject = document.querySelectorAll('.project')
     const projectsInfo = [
         {   
             id :0,
@@ -23,18 +21,16 @@ const Project = () => {
         },
     ]
     
-    const MouseOver = (e) =>{
+    const hoverEffect = () =>{
         const project = document.querySelectorAll('.project')
         project.forEach(pr =>{
             pr.addEventListener('mouseover', () =>{
-                console.log('pr working')
-                console.log(pr)
+                // div id container
                 pr.children[0].classList.add('hover')
+                // btns
                 pr.children[1].classList.add('btn-display')
             })
             pr.addEventListener('mouseout', () =>{
-                console.log('pr working : mouse out')
-                console.log(pr)
                 pr.children[0].classList.remove('hover')
                 pr.children[1].classList.remove('btn-display')
             })
@@ -61,7 +57,7 @@ const Project = () => {
         })
     return (
         
-        <div className='projects' onMouseOver={MouseOver}  >
+        <div className='projects' onMouseOver={hoverEffect}  >
             {projectInfo }
         </div>
 
