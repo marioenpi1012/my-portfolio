@@ -27,16 +27,17 @@ a{
 .navbar .nav-links ul {
   display: flex;
   font-size: 1.5rem;
-
+  list-style: none;
 }
 .navbar #phone-nav{
   display: none;
 }
-.navbar .nav-links ul li{
+.navbar .nav-links ul li a{
   color:#FAFAFA;
   padding: 0 10px;
-  list-style: none;
-
+  text-decoration: none;
+  margin: 0 5px;
+  text-transform: uppercase;
 }
 .currentLocation{
   color: rgb(68, 67, 67) !important;
@@ -122,6 +123,7 @@ a{
   background-color: #FAFAFA;
   color:#32333A;
   border-radius: 5px;
+  cursor: pointer;
 }
 .project .image{
   margin: 25px 0px;
@@ -137,28 +139,43 @@ a{
 /* Contact Component */
 .contactForm{
   text-align: center;
-  margin: 5% 0 ;
+  margin: 10% 0 ;
+
 }
 .contactForm #formTitle{
   margin: 10px 0;
-  border-bottom: 1px solid #32333A;
+  text-transform: uppercase;
+  font-weight: 200;
 }
 #form{
+  border-top: 1px solid #32333A;
   display: inline-grid;
   width: 50%;
+}
+.error{
+  border: 1px solid red;
 }
 #form input, #form textarea{
   padding: 10px;
   width: 100%;
   margin: 10px 0;
 }
+#form .btn{
+  width: 100px;
+  border-radius: 5px;
+  background: #616060;
+  color: #FAFAFA;
+}
+/* Contact Component End */
 
+/* Phone @media 600px and less */
 @media only screen and (max-width:600px){
   body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
+  /* Navbar Component Start */
   .navbar{
     display: block;
   }
@@ -186,9 +203,13 @@ a{
     color: #FAFAFA;
     display: block;
   }
+  /* Nav Component End */
+  /* Body Component Start */
   #body{
     background-image: url('./images/phone-background.jpg');
   }
+  /* Body Component End */
+  /* Projects Component Start */
   .projects{
     flex-wrap: revert;
     justify-content: space-between;
@@ -216,5 +237,10 @@ a{
     position: relative;
     transform: translate(130px, -250px);
   }
-  
+  /* Projects Component End */
+  /* Contact Component Start */
+  .contactForm{
+    transform: translate(0px, 100px);
+  }
+  /* Contact Component End */
 }
