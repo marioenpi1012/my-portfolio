@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.643bc5d4.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.8b423e7b.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.8b423e7b.chunk.js.map",
+    "runtime-main.js": "/my-portfolio/static/js/runtime-main.b7380e25.js",
+    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.b7380e25.js.map",
+    "static/js/2.c4ea5fad.chunk.js": "/my-portfolio/static/js/2.c4ea5fad.chunk.js",
+    "static/js/2.c4ea5fad.chunk.js.map": "/my-portfolio/static/js/2.c4ea5fad.chunk.js.map",
+    "static/js/3.9eeeac42.chunk.js": "/my-portfolio/static/js/3.9eeeac42.chunk.js",
+    "static/js/3.9eeeac42.chunk.js.map": "/my-portfolio/static/js/3.9eeeac42.chunk.js.map",
+    "index.html": "/my-portfolio/index.html",
+    "static/css/main.643bc5d4.chunk.css.map": "/my-portfolio/static/css/main.643bc5d4.chunk.css.map",
+    "static/js/2.c4ea5fad.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.c4ea5fad.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/my-portfolio/static/media/phone-background.a47bbbd4.jpg",
+    "static/media/desktop-design-dark.8e3ac4a7.jpg": "/my-portfolio/static/media/desktop-design-dark.8e3ac4a7.jpg",
+    "static/media/desktop-preview.90f7d5f7.jpg": "/my-portfolio/static/media/desktop-preview.90f7d5f7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b7380e25.js",
+    "static/js/2.c4ea5fad.chunk.js",
+    "static/css/main.643bc5d4.chunk.css",
+    "static/js/main.8b423e7b.chunk.js"
+  ]
+}
