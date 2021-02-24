@@ -3,6 +3,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Body from './components/Body'
 import Projects from './components/Projects'
+import Footer from './components/Footer'
 import {HashRouter as Router, Route,} from 'react-router-dom'
 import {Helmet} from 'react-helmet'
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" exact> <Body /> <Projects />  </Route>
         <Route path='/about'   component={About} />
         <Route path='/contact'  component={Contact} />
+        <Footer />
       </div>
     </Router>
     

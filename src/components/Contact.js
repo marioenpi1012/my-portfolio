@@ -25,6 +25,8 @@ const Contact = () => {
             
             <div className="contactForm">
                 <h1 id='formTitle'>Contact Me</h1>
+                <div className="line"></div>
+                <p id='subtitle'>Let's Work Together!</p>
                 <form onSubmit={sendEmail} id='form' onChange={validation}>
                     <input type="text" placeholder='Your Name' name='name' required/>
                     <input type="text" placeholder='Your Email' name='email' required/>

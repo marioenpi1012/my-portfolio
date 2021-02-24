@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.App{
+  position: relative;
+  min-height: 100vh;
+}
 /* NavBar Component */
 a{
   text-decoration: none;
@@ -11,7 +15,7 @@ a{
   display: flex;
   justify-content: space-between;
   /* margin: 10px; */
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: #32333A;
   min-width: normal;
   padding: 25px;
@@ -148,9 +152,16 @@ a{
   font-weight: 200;
 }
 #form{
-  border-top: 1px solid #32333A;
   display: inline-grid;
   width: 50%;
+}
+.line{
+  border: 1px solid #32333A;
+  width: 50%;
+  margin: 0 25%;
+}
+#subtitle{
+  margin:20px 0
 }
 .error{
   border: 1px solid red;
@@ -167,7 +178,48 @@ a{
   color: #FAFAFA;
 }
 /* Contact Component End */
+/* About Component Start */
+  #title{
+    text-align: center;
+    margin: 2% 0;
+    font-weight: 200;
+  }
 
+  .container{
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .photo img{
+    width: 400px;
+  }
+  .container .description{
+    width: 45%;
+    text-align: center;
+    margin: 5% 0;
+  }
+/* About Component End */
+
+/* Footer Component Start */
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+.footer .footer-line{
+  border: 1px solid #32333A;
+  margin: 15px 5%;
+}
+.footer ul li{
+  text-align: center;
+}
+.footer ul li a{
+  font-size:2rem;
+  list-style: none;
+  color: #32333A;
+}
+/* Footer Component End */
 /* Phone @media 600px and less */
 @media only screen and (max-width:600px){
   body{
@@ -213,7 +265,7 @@ a{
   .projects{
     flex-wrap: revert;
     justify-content: space-between;
-    margin: 5px 10px;
+    margin: 0px 10px;
     overflow-x: scroll;
   }
   .project{
@@ -241,6 +293,12 @@ a{
   /* Contact Component Start */
   .contactForm{
     transform: translate(0px, 100px);
+    height: 70vh;
   }
   /* Contact Component End */
+  /* Footer Component Start */
+  .footer{
+    position: relative;
+  }
+  /* Footer Component End */
 }
