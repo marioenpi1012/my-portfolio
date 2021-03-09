@@ -16,7 +16,7 @@ function App() {
       </Helmet>
       <div className="App">
         <Navbar  />
-        <Route path="/" exact> <Body /> <Projects />  </Route>
+        <Route path="/" exact> <Body /><Projects/>  </Route>
         <Route path='/about'   component={About} />
         <Route path='/contact'  component={Contact} />
         <Footer />

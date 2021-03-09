@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/marioenpi1012/my-portfolio.git/static/css/main.caab323c.chunk.css",
-    "main.js": "/marioenpi1012/my-portfolio.git/static/js/main.56034bd4.chunk.js",
-    "main.js.map": "/marioenpi1012/my-portfolio.git/static/js/main.56034bd4.chunk.js.map",
-    "runtime-main.js": "/marioenpi1012/my-portfolio.git/static/js/runtime-main.451346da.js",
-    "runtime-main.js.map": "/marioenpi1012/my-portfolio.git/static/js/runtime-main.451346da.js.map",
-    "static/js/2.f5469230.chunk.js": "/marioenpi1012/my-portfolio.git/static/js/2.f5469230.chunk.js",
-    "static/js/2.f5469230.chunk.js.map": "/marioenpi1012/my-portfolio.git/static/js/2.f5469230.chunk.js.map",
-    "static/js/3.9eeeac42.chunk.js": "/marioenpi1012/my-portfolio.git/static/js/3.9eeeac42.chunk.js",
-    "static/js/3.9eeeac42.chunk.js.map": "/marioenpi1012/my-portfolio.git/static/js/3.9eeeac42.chunk.js.map",
-    "index.html": "/marioenpi1012/my-portfolio.git/index.html",
-    "static/css/main.caab323c.chunk.css.map": "/marioenpi1012/my-portfolio.git/static/css/main.caab323c.chunk.css.map",
-    "static/js/2.f5469230.chunk.js.LICENSE.txt": "/marioenpi1012/my-portfolio.git/static/js/2.f5469230.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/marioenpi1012/my-portfolio.git/static/media/phone-background.a47bbbd4.jpg",
-    "static/media/desktop-design-dark.8e3ac4a7.jpg": "/marioenpi1012/my-portfolio.git/static/media/desktop-design-dark.8e3ac4a7.jpg",
-    "static/media/desktop-preview.90f7d5f7.jpg": "/marioenpi1012/my-portfolio.git/static/media/desktop-preview.90f7d5f7.jpg",
-    "static/media/mario.5ac3609a.jpg": "/marioenpi1012/my-portfolio.git/static/media/mario.5ac3609a.jpg"
+    "main.css": "/my-portfolio/static/css/main.170683c5.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.56034bd4.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.56034bd4.chunk.js.map",
+    "runtime-main.js": "/my-portfolio/static/js/runtime-main.b7380e25.js",
+    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.b7380e25.js.map",
+    "static/js/2.f5469230.chunk.js": "/my-portfolio/static/js/2.f5469230.chunk.js",
+    "static/js/2.f5469230.chunk.js.map": "/my-portfolio/static/js/2.f5469230.chunk.js.map",
+    "static/js/3.9eeeac42.chunk.js": "/my-portfolio/static/js/3.9eeeac42.chunk.js",
+    "static/js/3.9eeeac42.chunk.js.map": "/my-portfolio/static/js/3.9eeeac42.chunk.js.map",
+    "index.html": "/my-portfolio/index.html",
+    "static/css/main.170683c5.chunk.css.map": "/my-portfolio/static/css/main.170683c5.chunk.css.map",
+    "static/js/2.f5469230.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.f5469230.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/my-portfolio/static/media/phone-background.a47bbbd4.jpg",
+    "static/media/desktop-design-dark.8e3ac4a7.jpg": "/my-portfolio/static/media/desktop-design-dark.8e3ac4a7.jpg",
+    "static/media/desktop-preview.90f7d5f7.jpg": "/my-portfolio/static/media/desktop-preview.90f7d5f7.jpg",
+    "static/media/mario.5ac3609a.jpg": "/my-portfolio/static/media/mario.5ac3609a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.451346da.js",
+    "static/js/runtime-main.b7380e25.js",
     "static/js/2.f5469230.chunk.js",
-    "static/css/main.caab323c.chunk.css",
+    "static/css/main.170683c5.chunk.css",
     "static/js/main.56034bd4.chunk.js"
   ]
 }
