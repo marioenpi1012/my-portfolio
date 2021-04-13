@@ -1,22 +1,29 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect'
+import Mario from '../images/mario.jpg'
+import Projects from './Projects'
+import {NavLink}  from 'react-router-dom'
 const Body = () => {
-    
+    const Btn = () =>{
+        console.log('Event working')
+    }
     return (
         <div id='body'>
-            <div className="text">
-                <span id='text'> I'm Mario </span> <Typewriter  options={{loop:true}}
-                    onInit={(typewriter) =>{
-                        typewriter
-                        .typeString("a Web Developer")
-                        .pauseFor(2000)
-                        .deleteAll()
-                        .typeString("Welcome to My Journey!")
-                        .pauseFor(2000)
-                        .deleteAll()
-                        .start()
-                    }}
-                />
+            <div className="intro-container">
+                <div className="introduction">
+                    <p>Hi,</p>
+                    <p>I'm Mario</p>
+                    <p>A Front End Developer</p>
+                    <NavLink to='/projects' >
+                        <input type="button" value="My Projects"
+                        onClick={Btn}
+                        />
+                    </NavLink>
+                    
+                </div>
+                <div className="image">
+                    <img src={Mario} alt="" width='100px' height='100px'/>
+                </div>
             </div>
         </div>
     )

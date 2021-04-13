@@ -18,20 +18,20 @@ const Contact = () => {
     } 
 
     return (
-        <div>
+        <div className='contact'>
             <Helmet>
-                <title>My Portfolio | Contact Me</title>
+                <title>Mario Pineda | Contact Me</title>
             </Helmet>
             
             <div className="contactForm">
-                <h1 id='formTitle'>Contact Me</h1>
+                <h1 id='formTitle'>Get in Touch</h1>
                 <div className="line"></div>
-                <p id='subtitle'>Let's Work Together!</p>
+                <p id='subtitle'>Let's Work Together and Create Something Meaningful!</p>
                 <form onSubmit={sendEmail} id='form' onChange={validation}>
                     <input type="text" placeholder='Your Name' name='name' required/>
                     <input type="text" placeholder='Your Email' name='email' required/>
-                    <textarea type="text" placeholder='Message' name='message' required/>
-                    <input type="submit" className='btn'/>
+                    <textarea type="text" placeholder='Message' name='message' id='textArea' required/>
+                    <input type="submit" className='contactFormSubmitBtn'/>
                 </form>
             </div>
         </div>
