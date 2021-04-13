@@ -498,6 +498,7 @@ a{
   }
   .introduction input{
     margin: 15px 30px;
+    border-radius: 2px;
   }
   .image img{
     height: 250px;
@@ -533,6 +534,7 @@ a{
   }
   .carousel-container{
     margin: auto;
+    width: 90%;
   }
   /* Projects Component End */
   /* About Component Start */
@@ -555,10 +557,16 @@ a{
   .description p{
     padding: 5%;
   }
+  .description input{
+    border-radius: 2px;
+  }
   /* About Component End */
   /* Contact Component Start */
   .contactForm{
     height: 70vh;
+  }
+  #form .contactFormSubmitBtn{
+    border-radius: 2px;
   }
   /* Contact Component End */
   /* Footer Component Start */
