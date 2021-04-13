@@ -122,9 +122,7 @@ a{
   margin: 0 20px;
   /* margin-left:214px; */
 }
-.title, .image, .description{
-  pointer-events: none;
-}
+
 .hover{
   transition: ease-in-out 1s;
   background-color: #32333A;
@@ -279,14 +277,15 @@ a{
     width: 70%;
     margin: auto;
   }
+  .description a{
+    margin: auto;
+  }
   .description input{
     background: var(--bg-color);
     color: var(--font-color);
     padding: 15px 25px;
-    width: 30%;
     margin:auto;
-
-
+    font-size: 1.5rem;
   }
 /* About Component End */
 /* Carousel Component Start */
@@ -295,8 +294,7 @@ a{
   display: flex;
   position: absolute;
   right: 50%;
-  top: 75%;
-  
+  margin: 5% 0;
 }
 .arrows{
   font-size: 2.5rem;
@@ -448,6 +446,9 @@ a{
     margin: auto;
     direction: rtl;
   }
+  .nav-container .navbar{
+    font-size: 1.5rem;
+  }
   .navbar .nav-links{
     display: none;
     transition: all .5s ease-in-out;
@@ -461,7 +462,6 @@ a{
     flex-direction: column-reverse;
     justify-content: space-around;
     padding: 30px 0;
-    
   }
   .navbar .nav-links ul li{
     padding: 15px 0;

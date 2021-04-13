@@ -1,5 +1,6 @@
 import {Helmet} from 'react-helmet'
 import pic from '../images/mario.jpg'
+import {NavLink}  from 'react-router-dom'
 const About = () => {
     return (
         <div className='about'>
@@ -20,7 +21,10 @@ const About = () => {
                         Responsive designed. 
                         
                     </p>
-                    <input type="button" value="Get in Touch"/>
+                    <NavLink to='/contact' >
+                        <input type="button" value="Contact Me"
+                        />
+                    </NavLink>
                 </div>
             </div>
             </div>
