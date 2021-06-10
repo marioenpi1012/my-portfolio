@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.e1c7c4f4.chunk.css",
-    "main.js": "/my-portfolio/static/js/main.76be4d5b.chunk.js",
-    "main.js.map": "/my-portfolio/static/js/main.76be4d5b.chunk.js.map",
-    "runtime-main.js": "/my-portfolio/static/js/runtime-main.2650c1d7.js",
-    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.2650c1d7.js.map",
-    "static/js/2.b926a8d8.chunk.js": "/my-portfolio/static/js/2.b926a8d8.chunk.js",
-    "static/js/2.b926a8d8.chunk.js.map": "/my-portfolio/static/js/2.b926a8d8.chunk.js.map",
-    "static/js/3.2f0d9656.chunk.js": "/my-portfolio/static/js/3.2f0d9656.chunk.js",
-    "static/js/3.2f0d9656.chunk.js.map": "/my-portfolio/static/js/3.2f0d9656.chunk.js.map",
+    "main.css": "/my-portfolio/static/css/main.18183a5c.chunk.css",
+    "main.js": "/my-portfolio/static/js/main.c6676cf0.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.c6676cf0.chunk.js.map",
+    "runtime-main.js": "/my-portfolio/static/js/runtime-main.7a1c52cd.js",
+    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.7a1c52cd.js.map",
+    "static/js/2.a2eb8b96.chunk.js": "/my-portfolio/static/js/2.a2eb8b96.chunk.js",
+    "static/js/2.a2eb8b96.chunk.js.map": "/my-portfolio/static/js/2.a2eb8b96.chunk.js.map",
+    "static/js/3.6d0e2705.chunk.js": "/my-portfolio/static/js/3.6d0e2705.chunk.js",
+    "static/js/3.6d0e2705.chunk.js.map": "/my-portfolio/static/js/3.6d0e2705.chunk.js.map",
     "index.html": "/my-portfolio/index.html",
-    "static/css/main.e1c7c4f4.chunk.css.map": "/my-portfolio/static/css/main.e1c7c4f4.chunk.css.map",
-    "static/js/2.b926a8d8.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.b926a8d8.chunk.js.LICENSE.txt",
+    "static/css/main.18183a5c.chunk.css.map": "/my-portfolio/static/css/main.18183a5c.chunk.css.map",
+    "static/js/2.a2eb8b96.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.a2eb8b96.chunk.js.LICENSE.txt",
     "static/media/desktop-design-dark.8e3ac4a7.jpg": "/my-portfolio/static/media/desktop-design-dark.8e3ac4a7.jpg",
     "static/media/desktop-preview.90f7d5f7.jpg": "/my-portfolio/static/media/desktop-preview.90f7d5f7.jpg",
-    "static/media/mario.5ac3609a.jpg": "/my-portfolio/static/media/mario.5ac3609a.jpg"
+    "static/media/mario.5ac3609a.jpg": "/my-portfolio/static/media/mario.5ac3609a.jpg",
+    "static/media/netflixClone.fbb56415.png": "/my-portfolio/static/media/netflixClone.fbb56415.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.2650c1d7.js",
-    "static/js/2.b926a8d8.chunk.js",
-    "static/css/main.e1c7c4f4.chunk.css",
-    "static/js/main.76be4d5b.chunk.js"
+    "static/js/runtime-main.7a1c52cd.js",
+    "static/js/2.a2eb8b96.chunk.js",
+    "static/css/main.18183a5c.chunk.css",
+    "static/js/main.c6676cf0.chunk.js"
   ]
 }
