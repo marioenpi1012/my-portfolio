@@ -176,8 +176,8 @@ a{
 }
 .project .description{
   text-align: center;
-  margin: 0 39px;
-  width: 80%;
+  margin: auto;
+  width: 90%;
 }
 /* Body Component End */
 /* Contact Component */
@@ -530,8 +530,7 @@ a{
   .btns{
     display: none;
     width: fit-content;
-    position: relative;
-    transform: translate(130px, -250px);
+    transform: translate(105px, -250px);
   }
   .projects-title{
     margin: 15% 0;
