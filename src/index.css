@@ -95,6 +95,8 @@ a{
   margin: 10px 0 ;
   padding: 3% 5%;
   border-radius: 5px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px
 
 }
 
@@ -223,6 +225,8 @@ a{
 }
 #form .contactFormSubmitBtn{
   width: 100px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
   border-radius: 5px;
   background: var(--darkest-gray);
   color: var(--font-color);
@@ -288,6 +292,9 @@ a{
     padding: 15px 25px;
     margin:auto; 
     font-size: 1.5rem;
+    border-radius: 5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
   }
 /* About Component End */
 /* Carousel Component Start */
@@ -498,7 +505,6 @@ a{
   }
   .introduction input{
     margin: 15px 30px;
-    border-radius: 2px;
   }
   .image img{
     height: 250px;
@@ -559,9 +565,6 @@ a{
   }
   .description p{
     padding: 5%;
-  }
-  .description input{
-    border-radius: 2px;
   }
   /* About Component End */
   /* Contact Component Start */
