@@ -96,6 +96,7 @@ a{
   padding: 3% 5%;
   border-radius: 5px;
   -webkit-border-radius:5px;
+  -webkit-appearance: none;
   -moz-border-radius:5px
 
 }
@@ -160,6 +161,7 @@ a{
   justify-content: space-between;
   flex-direction: column;
   transform: translate(247px, -343px);
+
 }
 .btns button{
   padding: 10px;
@@ -227,6 +229,7 @@ a{
   width: 100px;
   -webkit-border-radius:5px;
   -moz-border-radius:5px;
+  -webkit-appearance: none;
   border-radius: 5px;
   background: var(--darkest-gray);
   color: var(--font-color);
@@ -295,6 +298,7 @@ a{
     border-radius: 5px;
     -webkit-border-radius:5px;
     -moz-border-radius:5px;
+    -webkit-appearance: none;
   }
 /* About Component End */
 /* Carousel Component Start */
