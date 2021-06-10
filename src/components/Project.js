@@ -1,8 +1,9 @@
 import todoImg from '../images/desktop-design-dark.jpg'
 import InsureLPImg from '../images/desktop-preview.jpg'
-import Carousel from './Carousel';
+import NetflixCloneImg from '../images/netflixClone.png'
+
 import {useState} from 'react'
-import { act } from 'react-dom/test-utils';
+import styled from 'styled-components'
 const Project = () => {
     const projectsInfo = [
         {
@@ -20,6 +21,14 @@ const Project = () => {
             description: "Build with HTML/ SCSS and JavaScript A company landing page Design Credit to FrontEnd Mentor.",
             liveWebsite: 'https://marioenpi1012.github.io/InsureLandingPage/',
             code : 'https://github.com/marioenpi1012/InsureLandingPage'
+        },
+        {
+            id:2,
+            title: 'Netflix Clone',
+            image: NetflixCloneImg,
+            description: "Build with HTML/ SCSS and JavaScript. A Netflix Clone using an API to get trending, top-rated and more movies/tv-shows",
+            liveWebsite: 'https://marioenpi1012.github.io/netflix-clone/#/',
+            code : 'https://github.com/marioenpi1012/netflix-clone'
         }
     ]
 
@@ -108,10 +117,14 @@ const Project = () => {
                     </div>
                     <div className="slider">
                     {Object.keys(projectsInfo).map(index =>(
-                        <span id='dots' onClick={event=> handleSetClick(event)}
+                        index == active
+                        ? <Current className='dots'  />
+                        : <span 
+                        className='dots' onClick={event=> handleSetClick(event)}
                         data-project={index}
                         style={index == active ? {background:'#45454d'} : {}}
                         key={index}/>))}
+                        
                 </div>
                 </div>
                 <div className='arrows' id='next' onClick={next} >
@@ -120,9 +133,14 @@ const Project = () => {
 
             </div>
 
-
         </div>
     )
 }
+
+const Current = styled.span `
+    :before{
+        background:#45454d
+    }
+`
 
 export default Project
