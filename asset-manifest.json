@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.18183a5c.chunk.css",
+    "main.css": "/my-portfolio/static/css/main.4629492b.chunk.css",
     "main.js": "/my-portfolio/static/js/main.c6676cf0.chunk.js",
     "main.js.map": "/my-portfolio/static/js/main.c6676cf0.chunk.js.map",
     "runtime-main.js": "/my-portfolio/static/js/runtime-main.7a1c52cd.js",
@@ -10,7 +10,7 @@
     "static/js/3.6d0e2705.chunk.js": "/my-portfolio/static/js/3.6d0e2705.chunk.js",
     "static/js/3.6d0e2705.chunk.js.map": "/my-portfolio/static/js/3.6d0e2705.chunk.js.map",
     "index.html": "/my-portfolio/index.html",
-    "static/css/main.18183a5c.chunk.css.map": "/my-portfolio/static/css/main.18183a5c.chunk.css.map",
+    "static/css/main.4629492b.chunk.css.map": "/my-portfolio/static/css/main.4629492b.chunk.css.map",
     "static/js/2.a2eb8b96.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.a2eb8b96.chunk.js.LICENSE.txt",
     "static/media/desktop-design-dark.8e3ac4a7.jpg": "/my-portfolio/static/media/desktop-design-dark.8e3ac4a7.jpg",
     "static/media/desktop-preview.90f7d5f7.jpg": "/my-portfolio/static/media/desktop-preview.90f7d5f7.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.7a1c52cd.js",
     "static/js/2.a2eb8b96.chunk.js",
-    "static/css/main.18183a5c.chunk.css",
+    "static/css/main.4629492b.chunk.css",
     "static/js/main.c6676cf0.chunk.js"
   ]
 }
