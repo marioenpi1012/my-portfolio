@@ -116,6 +116,7 @@ a{
 }
 .projects{
   display: flex;
+  position: relative;
   text-align: center;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -293,9 +294,9 @@ a{
 
 .slider{
   display: flex;
-  position: absolute;
-  right: 50%;
-  bottom: 20%;
+  position: relative;
+  justify-content: center;
+  margin: 15px 0 ;
 }
 .arrows{
   font-size: 2.5rem;
@@ -525,10 +526,7 @@ a{
     height: 200px;
     min-width:369.25px ;
   }
-  .slider{
-    right: 39%;
-    bottom: 29%;
-  }
+  
   .btns{
     display: none;
     width: fit-content;
