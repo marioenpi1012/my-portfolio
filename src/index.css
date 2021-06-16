@@ -545,7 +545,10 @@ a{
   .projects-title{
     margin: 15% 0;
   }
-  
+  .carousel-container{
+    margin: auto;
+    width: 85%;
+  }
   /* Projects Component End */
   /* About Component Start */
   .container{
