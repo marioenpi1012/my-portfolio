@@ -26,7 +26,7 @@ const Project = () => {
             id:2,
             title: 'Netflix Clone',
             image: NetflixCloneImg,
-            description: "Build with HTML/ SCSS and JavaScript. A Netflix Clone using an API to get trending, top-rated and more movies/tv-shows",
+            description: "Build with HTML/ CSS and JavaScript. A Netflix Clone using an API to get trending, top-rated and more movies/tv-shows",
             liveWebsite: 'https://marioenpi1012.github.io/netflix-clone/#/',
             code : 'https://github.com/marioenpi1012/netflix-clone'
         }
