@@ -135,12 +135,13 @@ a{
 .btn-display{
   display: flex !important;
 }
-/* #proj{
-  background: var(--bg-color);
-  height: 100vh;
-} */
+
 .project{
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   width: 618px;
   height: 513px;
   background-color: rgba(247, 246, 246, 1);
@@ -160,7 +161,9 @@ a{
   display: none;
   justify-content: space-between;
   flex-direction: column;
-  transform: translate(247px, -343px);
+  left: 42%;
+  top: 25%;
+  /* transform: translate(247px, -343px); */
 
 }
 .btns button{
@@ -293,7 +296,7 @@ a{
     background: var(--bg-color);
     color: var(--font-color);
     padding: 15px 25px;
-    margin:auto; 
+    margin:auto;
     font-size: 1.5rem;
     border-radius: 5px;
     -webkit-border-radius:5px;
@@ -344,12 +347,13 @@ a{
 }
 
 .carousel-container{
-  display: -webkit-box;
-  -webkit-box-align: center;
+  display: flex;
+  /* -webkit-box-align: center; */
+  flex-direction: row;
+  align-items: center;
   margin: 40px auto;
   max-width: 700px;
-  flex-direction: column;
-  
+
 }
 /* Carousel Component End */
 /* Footer Component Start */
@@ -432,7 +436,7 @@ a{
 
 /* @media 760px and less */
 @media only screen and (max-width:760px){
-  
+
   /* About Component Start */
   .container .photo img{
     height: 300px;
@@ -467,7 +471,7 @@ a{
     width: 100%;
     padding: 50% 0;
   }
-  
+
   .navbar .nav-links ul{
     display: flex;
     flex-direction: column-reverse;
@@ -519,12 +523,13 @@ a{
   .project{
     width:90%;
     margin:auto;
-    max-height: 370px;
+    /* max-height: 370px; */
+    height: auto;
     text-align: center;
     max-width: 370px;
   }
-  
-  
+
+
   #container{
     width: 100%;
     overflow-x: hidden;
@@ -532,15 +537,16 @@ a{
   .project .image{
     margin: 0px;
     padding: 10px 0;
-    width: auto;
-    height: 200px;
-    min-width:369.25px ;
+    width: -webkit-fill-available;
+    /* height: 200px; */
+    /* min-width:369.25px ; */
   }
-  
+
   .btns{
     display: none;
     width: fit-content;
-    transform: translate(105px, -250px);
+    /* transform: translate(105px, -250px); */
+    left: 36%;
   }
   .projects-title{
     margin: 15% 0;

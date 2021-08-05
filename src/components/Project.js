@@ -1,7 +1,7 @@
 import todoImg from '../images/desktop-design-dark.jpg'
 import InsureLPImg from '../images/desktop-preview.jpg'
 import NetflixCloneImg from '../images/netflixClone.png'
-
+import UrlShorteningImg from '../images/url_shortening.png'
 import {useState} from 'react'
 import styled from 'styled-components'
 const Project = () => {
@@ -29,7 +29,16 @@ const Project = () => {
             description: "Build with HTML/ CSS and JavaScript. A Netflix Clone using an API to get trending, top-rated and more movies/tv-shows",
             liveWebsite: 'https://marioenpi1012.github.io/netflix-clone/#/',
             code : 'https://github.com/marioenpi1012/netflix-clone'
+        },
+        {
+            id:3,
+            title:'URL Shortening',
+            image:UrlShorteningImg,
+            description:'Build responsive with HTML, SCSS, and React. A URL Shortening app uses am API to short links which are save in local storage.',
+            liveWebsite:'https://marioenpi1012.github.io/url_shortening/',
+            code:'https://github.com/marioenpi1012/url_shortening'
         }
+
     ]
 
     const hoverEffect = () =>{
