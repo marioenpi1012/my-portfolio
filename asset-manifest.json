@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.ef824b6b.chunk.css",
-    "main.js": "/static/js/main.642f5649.chunk.js",
-    "main.js.map": "/static/js/main.642f5649.chunk.js.map",
+    "main.css": "/static/css/main.de110bb6.chunk.css",
+    "main.js": "/static/js/main.b4b8fb31.chunk.js",
+    "main.js.map": "/static/js/main.b4b8fb31.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.0b71880b.js",
     "runtime-main.js.map": "/static/js/runtime-main.0b71880b.js.map",
     "static/js/2.53d2dc8a.chunk.js": "/static/js/2.53d2dc8a.chunk.js",
@@ -10,17 +10,18 @@
     "static/js/3.6d0e2705.chunk.js": "/static/js/3.6d0e2705.chunk.js",
     "static/js/3.6d0e2705.chunk.js.map": "/static/js/3.6d0e2705.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.ef824b6b.chunk.css.map": "/static/css/main.ef824b6b.chunk.css.map",
+    "static/css/main.de110bb6.chunk.css.map": "/static/css/main.de110bb6.chunk.css.map",
     "static/js/2.53d2dc8a.chunk.js.LICENSE.txt": "/static/js/2.53d2dc8a.chunk.js.LICENSE.txt",
     "static/media/desktop-design-dark.8e3ac4a7.jpg": "/static/media/desktop-design-dark.8e3ac4a7.jpg",
     "static/media/desktop-preview.90f7d5f7.jpg": "/static/media/desktop-preview.90f7d5f7.jpg",
     "static/media/mario.5ac3609a.jpg": "/static/media/mario.5ac3609a.jpg",
-    "static/media/netflixClone.fbb56415.png": "/static/media/netflixClone.fbb56415.png"
+    "static/media/netflixClone.fbb56415.png": "/static/media/netflixClone.fbb56415.png",
+    "static/media/url_shortening.f74b4c79.png": "/static/media/url_shortening.f74b4c79.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0b71880b.js",
     "static/js/2.53d2dc8a.chunk.js",
-    "static/css/main.ef824b6b.chunk.css",
-    "static/js/main.642f5649.chunk.js"
+    "static/css/main.de110bb6.chunk.css",
+    "static/js/main.b4b8fb31.chunk.js"
   ]
 }
