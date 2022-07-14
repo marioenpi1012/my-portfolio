@@ -1,7 +1,7 @@
-import todoImg from '../images/desktop-design-dark.jpg'
-import InsureLPImg from '../images/desktop-preview.jpg'
-import NetflixCloneImg from '../images/netflixClone.png'
-import UrlShorteningImg from '../images/url_shortening.png'
+import todoImg from '../assets/images/desktop-design-dark.jpg'
+import InsureLPImg from '../assets/images/desktop-preview.jpg'
+import NetflixCloneImg from '../assets/images/netflixClone.png'
+import UrlShorteningImg from '../assets/images/url_shortening.png'
 import {useState} from 'react'
 import styled from 'styled-components'
 const Project = () => {
@@ -37,7 +37,17 @@ const Project = () => {
             description:'Build responsive with HTML, SCSS, and React. A URL Shortening app uses am API to short links which are save in local storage.',
             liveWebsite:'https://marioenpi1012.github.io/url_shortening/',
             code:'https://github.com/marioenpi1012/url_shortening'
-        }
+        },
+        // {
+        //     id:4, 
+        //     title:'E-commerce',
+        //     liveWebsite:'https://marioenpi1012.github.io/Ecomerce-with-react-redux',
+        //     code:'https://github.com/marioenpi1012/Ecomerce-with-react-redux'
+        // },{
+        //     id:5,
+        //     title:'El Panamericano',
+        //     liveWebsite:'https://elpanamericano.vercel.app'
+        // }
 
     ]
 

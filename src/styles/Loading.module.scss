@@ -1,0 +1,40 @@
+@import './Colors.module.scss';
+
+.Loading{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    max-height: 100vh;
+    max-width:100vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blur-background;
+    -webkit-backdrop-filter: blur(32px);
+    -moz-backdrop-filter:blur(32px);
+    backdrop-filter: blur(32px);
+    overflow: hidden;
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        width: auto;
+        margin: 0 auto;
+        span{
+            color: $black-font-color;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .line{
+            fill:none;
+            stroke-width: 3;
+            stroke:$black-font-color;
+            margin: 0 1rem;
+        }
+    }
+}

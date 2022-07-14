@@ -2,6 +2,7 @@ import React from 'react'
 import {NavLink}  from 'react-router-dom'
 import {FaBars, FaTimes, FaLinkedin} from 'react-icons/fa'
 import {useState} from 'react'
+import styles from '../styles/Nav.module.scss'
 const Navbar = () => {
     const [close, setClose] = useState(true)
 
@@ -32,17 +33,19 @@ const Navbar = () => {
                         {close ?(<FaBars/>):(<FaTimes/>) }
                     </div>
                 </div>
-                    <div className='nav-links' >
-                        <ul>
-                            <li><NavLink to='/projects' activeClassName='currentLocation'>Projects</NavLink></li>
-                            <li> <NavLink to='/about'  activeClassName='currentLocation'>About</NavLink></li>
-                            <li> <NavLink to='/contact' activeClassName='currentLocation'>Contact Me</NavLink></li>
-                        </ul>
-                        <ul>
-                            <li> <a href="https://www.linkedin.com/in/mario-pineda-9a6b68186/" target='_blank'><FaLinkedin /></a></li>
-                        </ul>
-                    </div>
-                    
+                <div className='nav-links' >
+                    <ul>
+                        <li><NavLink to='/projects' activeClassName='currentLocation'>Projects</NavLink></li>
+                        <li> <NavLink to='/about'  activeClassName='currentLocation'>About</NavLink></li>
+                        <li> <NavLink to='/contact' activeClassName='currentLocation'>Contact Me</NavLink></li>
+                    </ul>
+                    <ul>
+                        <li> <a href="https://www.linkedin.com/in/mario-pineda-9a6b68186/" target='_blank'><FaLinkedin /></a></li>
+                    </ul>
+                </div>
+                <div className={styles.menuToggle}>
+                    <div className={styles.menu}></div>
+                </div>
                 
             </nav>
         </div>

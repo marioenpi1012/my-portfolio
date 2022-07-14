@@ -6,8 +6,6 @@
   --light-gray:#aeaeae;
   --font-color:#dcdcdc;
 
-
-
 }
 *{
   margin: 0;
@@ -70,8 +68,7 @@ a{
   }
 /* Body Component Start */
 #body{
-  min-height: 100vh;
-  width: 100%;
+  height: calc(100vh - 80px);
   background: var(--bg-color);
 }
 .intro-container{
