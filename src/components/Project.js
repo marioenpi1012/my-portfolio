@@ -1,165 +1,79 @@
-import todoImg from '../assets/images/desktop-design-dark.jpg'
-import InsureLPImg from '../assets/images/desktop-preview.jpg'
-import NetflixCloneImg from '../assets/images/netflixClone.png'
-import UrlShorteningImg from '../assets/images/url_shortening.png'
-import {useState} from 'react'
-import styled from 'styled-components'
-const Project = () => {
-    const projectsInfo = [
-        {
-            id :0,
-            title: 'Todo App',
-            image: todoImg,
-            description: "Build with HTML/ SCSS and JavaScript A todo app that stores its data in local storage as long with a dark and light theme. Design Credit to FrontEnd Mentor.",
-            liveWebsite: 'https://marioenpi1012.github.io/todo-app/',
-            code:'https://github.com/marioenpi1012/todo-app'
-        },
-        {
-            id:1,
-            title: 'Insure Landing Page',
-            image: InsureLPImg,
-            description: "Build with HTML/ SCSS and JavaScript A company landing page Design Credit to FrontEnd Mentor.",
-            liveWebsite: 'https://marioenpi1012.github.io/InsureLandingPage/',
-            code : 'https://github.com/marioenpi1012/InsureLandingPage'
-        },
-        {
-            id:2,
-            title: 'Netflix Clone',
-            image: NetflixCloneImg,
-            description: "Build with HTML/ CSS and JavaScript. A Netflix Clone using an API to get trending, top-rated and more movies/tv-shows",
-            liveWebsite: 'https://marioenpi1012.github.io/netflix-clone/#/',
-            code : 'https://github.com/marioenpi1012/netflix-clone'
-        },
-        {
-            id:3,
-            title:'URL Shortening',
-            image:UrlShorteningImg,
-            description:'Build responsive with HTML, SCSS, and React. A URL Shortening app uses am API to short links which are save in local storage.',
-            liveWebsite:'https://marioenpi1012.github.io/url_shortening/',
-            code:'https://github.com/marioenpi1012/url_shortening'
-        },
-        // {
-        //     id:4, 
-        //     title:'E-commerce',
-        //     liveWebsite:'https://marioenpi1012.github.io/Ecomerce-with-react-redux',
-        //     code:'https://github.com/marioenpi1012/Ecomerce-with-react-redux'
-        // },{
-        //     id:5,
-        //     title:'El Panamericano',
-        //     liveWebsite:'https://elpanamericano.vercel.app'
-        // }
-
-    ]
-
-    const hoverEffect = () =>{
-        const project = document.querySelectorAll('.project')
-        project.forEach(pr =>{
-            pr.addEventListener('mouseover', () =>{
-                // div id container
-                pr.children[0].classList.add('hover')
-                // btns
-                pr.children[1].classList.add('btn-display')
-            })
-            pr.addEventListener('mouseout', () =>{
-                pr.children[0].classList.remove('hover')
-                pr.children[1].classList.remove('btn-display')
-            })
-        })
+import React,{useState} from 'react'
+import {FaGithub} from 'react-icons/fa';
+import styles from '../pages/projects/Projects.module.scss'
+import {motion} from 'framer-motion/dist/framer-motion'
+const Project = ({project}) => {
+    const [mouse, setMouse] = useState({x:0,y:0,active:false})
+    const viewCursor = (e) =>{
+        const x = e.clientX * 100 / window.innerWidth 
+        const y = e.clientY * 100 / window.innerHeight
+        setMouse({x:x,y:y,active:true})
     }
-    const [current, setCurrent] = useState(projectsInfo[0])
-    const [active, setActive] = useState(0)
-    const handleSetClick = (e) =>{
-        setCurrent(projectsInfo[e.target.getAttribute('data-project')])
-        setActive(e.target.getAttribute('data-project'))
-    }
-    const prev = () =>{
-        if(current.id == 0){
-            setCurrent(projectsInfo[projectsInfo.length  - 1 ])
-            setActive(projectsInfo.length  - 1 )
-            console.log('id',projectsInfo.length  - 1 )
-        }else{
-            setCurrent(projectsInfo[current.id - 1])
-            setActive(current.id - 1 )
-            console.log(current.id - 1)
+    const variants = {
+        hidden:{
+            opacity:0,
+            transform:`translate3d(0px,0px,0px)`
+        },
+        animate:{
+            opacity:1,
+        },
+        exit:{
+            opacity:0
         }
-        console.log('prev working')
+
     }
-    const next = () =>{
-        if(current.id == projectsInfo.length - 1 ){
-            setCurrent(projectsInfo[current.id - projectsInfo.length + 1])
-            setActive(current.id - projectsInfo.length + 1)
-            console.log('id1', current.id - projectsInfo.length + 1)
-        }else{
-            setCurrent(projectsInfo[current.id + 1])
-            setActive(current.id + 1)
-            console.log('id2', current.id  + 1)
+    const showVariants = {
+        hidden:{
+            opacity:0,
+            y:"-10px"
+        },
+        animate:{
+            opacity:1,
+            y:0
         }
-        console.log(projectsInfo.length - 1)
-
-
-    }
-    const mobileHover = () =>{
-        console.log('event working')
-        const project = document.querySelectorAll('.project')
-        project.forEach(pr =>{
-            pr.addEventListener('click', () =>{
-                // div id container
-                pr.children[0].classList.add('hover')
-                // btns
-                pr.children[1].classList.add('btn-display')
-
-                setTimeout(
-                    function(){
-                    pr.children[0].classList.remove('hover')
-                    pr.children[1].classList.remove('btn-display')
-                },5000
-                )
-            })
-        })
     }
     return (
-        <div onMouseOver={hoverEffect}  onClick={mobileHover}>
-
-            <div className='carousel-container'>
-                <div className='arrows' id='prev' onClick={prev}> &#8249;</div>
-                <div className='project' key={current.id}>
-                    <div id="container">
-                        <div className="title">
-                            <h3>{current.title}</h3>
+        <a href={project.liveWebsite} target='_blank'>
+            <motion.div 
+                style={{backgroundImage:`url(${project.image})`}} 
+                className={styles.project}
+                onMouseMove={viewCursor}
+                onMouseLeave={()=>setMouse({active:false})}
+                initial='hidden'
+                whileHover='animate'
+                >
+                <motion.div 
+                    className={styles.pageOverlay}
+                    
+                    ></motion.div>
+                <motion.div 
+                    className={styles.view}
+                    variants={variants}
+                    initial='hidden'
+                    animate={ mouse.active ? {transform:`translate3d(${mouse.x}px, ${mouse.y}px,0px) scale3d(1,1,1)`,opacity:1} : {opacity:0}}
+                    exit='exit'
+                    >
+                    <div>view</div>
+                </motion.div>
+                <div
+                    className={styles.infoContainer}>
+                    <motion.div
+                        className={styles.info}>
+                        <div 
+                            initial={{opacity:1, y:'-10px'}}
+                            variants={showVariants}    
+                        className={styles.title}>{project.title}
                         </div>
-                        <img src={current.image} className="image"/>
-                        <div className="description">{current.description} </div>
-                    </div>
-                    <div className="btns">
-                        <button onClick={()=>window.open(current.code)}>Code</button>
-                        <button onClick={()=>window.open(current.liveWebsite)}>Live Website</button>
-                    </div>
-                    <div className="slider">
-                    {Object.keys(projectsInfo).map(index =>(
-                        index == active
-                        ? <Current className='dots'  />
-                        : <span 
-                        className='dots' onClick={event=> handleSetClick(event)}
-                        data-project={index}
-                        style={index == active ? {background:'#45454d'} : {}}
-                        key={index}/>))}
-                        
-                </div>
-                </div>
-                <div className='arrows' id='next' onClick={next} >
-                    &#8250;
-                </div>
+                        <motion.div 
+                            variants={showVariants}
+                            className={styles.description}>{project.description}</motion.div>
+                    </motion.div>
 
-            </div>
-
-        </div>
+                    <div className={styles.github}><a href={project.code} target='_blank'><FaGithub /></a></div>
+                </div>
+            </motion.div>
+        </a>
     )
 }
-
-const Current = styled.span `
-    :before{
-        background:#45454d
-    }
-`
 
 export default Project

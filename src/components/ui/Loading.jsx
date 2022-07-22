@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Loading.module.scss'
 import { motion } from 'framer-motion/dist/framer-motion'
+import { useLocation } from 'react-router-dom'
 const Loading = () => {
     const variants = {
         start:{
@@ -66,6 +67,8 @@ const Loading = () => {
             opacity:0,
         }
     }
+    const location = useLocation()
+    console.log(location)
     return (
         <motion.div 
             className={styles.Loading}
