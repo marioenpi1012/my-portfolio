@@ -1,0 +1,12 @@
+// $font-color:#aeaeae;
+$font-color:rgba(0, 0, 0, 100%);
+$secondary-font-color:#7f7f7f;
+$blur-background:rgba(225%,225%,225%,0.25);
+$black-font-color:#000;
+$background-color:#fff;
+
+@mixin Container {
+    position:relative;
+    max-width: none;
+    padding: 11rem 5rem;
+}
