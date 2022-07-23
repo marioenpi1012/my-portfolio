@@ -1,8 +1,12 @@
 @import './Colors.module';
-
+@media (hover:hover){
+    .navContainer .navbar .navLinks ul li div .subtitle{
+        opacity: 0;
+    }
+}
 .navContainer{
     width: 100vw;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 20;
@@ -72,8 +76,9 @@
                             text-align: center;
                         }
                         .subtitle{
-                            font-size: 1rem;
-                            color: hsla(0, 0, 100%, 0.7);
+                            opacity: 1;
+                            transform: translateY(0);
+                            color:hsla(0, 0, 100%, 0.7) ;
                         }
                     }
                     
@@ -177,6 +182,10 @@
     .navContainer{
         .navbar{
             padding: 18px 2rem;
+            .navLinks{
+                -webkit-clip-path:circle(100px at 90% -25%);
+                clip-path: circle(100px at 90% -25%);
+            }
             .navOpen{
                 -webkit-clip-path:circle(265vw at 90% -10%) !important;
                 clip-path: circle(265vw at 90% -10%);

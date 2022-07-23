@@ -10,14 +10,31 @@ const About = () => {
     const variants ={
         hidden:{
             opacity:0,
-            x:"100%",
+            scale:0.5,
+        },
+        animate:{
+            opacity:1,
+            scale:1,
+        }
+    }
+    const leftVariants = {
+        hidden:{
+            opacity:0,
+            x:'-100px'
         },
         animate:{
             opacity:1,
             x:0,
-            transition:{
-                duration:1,
-            }
+        }
+    }
+    const rightVariants = {
+        hidden:{
+            opacity:0,
+            x:'100px'
+        },
+        animate:{
+            opacity:1,
+            x:0,
         }
     }
     return (
@@ -25,23 +42,33 @@ const About = () => {
             className={styles.About}
             initial='hidden'
             whileInView='animate'
-            viewport={{margin:'-100% 0px 0% 0px'}}
+            viewport={{once:false}}
+            transition={{amount:0.8, duration:1}}
             >
             <Helmet>
                 <title>Mario Pineda | About</title>
             </Helmet>
             <div className={styles.container}>
-                <div className={styles.quote}>
+                <motion.div 
+                    className={styles.quote}
+                    variants={leftVariants}
+                    >
                     <p>
                     Let's work together to create high
                     quality design and an engaging experience.
                     </p>
-                </div>
-                <div className={styles.paginationContainer}>
+                </motion.div>
+                <motion.div 
+                    className={styles.paginationContainer}
+                    variants={variants}
+                    >
                     <div className={styles.pagination}>01</div>
                     <div className={styles.title}>About</div>
-                </div>
-                <div className={styles.description}>
+                </motion.div>
+                <motion.div 
+                    className={styles.description}
+                    variants={rightVariants}
+                    >
                     <p>
                         Hi I'm Mario; a Front end developer with 
                         a wide variety of experience.I like to always
@@ -49,7 +76,7 @@ const About = () => {
                         and can add a value to myself
                         
                     </p>
-                </div>
+                </motion.div>
                 <div className={styles.aboutPage}>
 
                 </div>

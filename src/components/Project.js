@@ -5,7 +5,7 @@ import {motion} from 'framer-motion/dist/framer-motion'
 const Project = ({project}) => {
     const [mouse, setMouse] = useState({x:0,y:0,active:false})
     const viewCursor = (e) =>{
-        const x = e.clientX * 100 / window.innerWidth 
+        const x = e.clientX * 100 / window.innerWidth
         const y = e.clientY * 100 / window.innerHeight
         setMouse({x:x,y:y,active:true})
     }
@@ -18,35 +18,34 @@ const Project = ({project}) => {
             opacity:1,
         },
         exit:{
-            opacity:0
         }
 
     }
     const showVariants = {
         hidden:{
             opacity:0,
-            y:"-10px"
+            y:"60%"
         },
         animate:{
             opacity:1,
-            y:0
+            y:"0%"
         }
     }
     return (
         <a href={project.liveWebsite} target='_blank'>
-            <motion.div 
-                style={{backgroundImage:`url(${project.image})`}} 
+            <motion.div
+                style={{backgroundImage:`url(${project.image})`}}
                 className={styles.project}
                 onMouseMove={viewCursor}
                 onMouseLeave={()=>setMouse({active:false})}
                 initial='hidden'
                 whileHover='animate'
                 >
-                <motion.div 
+                <motion.div
                     className={styles.pageOverlay}
-                    
+
                     ></motion.div>
-                <motion.div 
+                <motion.div
                     className={styles.view}
                     variants={variants}
                     initial='hidden'
@@ -55,22 +54,19 @@ const Project = ({project}) => {
                     >
                     <div>view</div>
                 </motion.div>
-                <div
+                <motion.div
+                    variants={showVariants}
                     className={styles.infoContainer}>
                     <motion.div
                         className={styles.info}>
-                        <div 
-                            initial={{opacity:1, y:'-10px'}}
-                            variants={showVariants}    
-                        className={styles.title}>{project.title}
+                        <div
+                            className={styles.title}>{project.title}
                         </div>
-                        <motion.div 
-                            variants={showVariants}
+                        <motion.div
                             className={styles.description}>{project.description}</motion.div>
                     </motion.div>
-
                     <div className={styles.github}><a href={project.code} target='_blank'><FaGithub /></a></div>
-                </div>
+                </motion.div>
             </motion.div>
         </a>
     )

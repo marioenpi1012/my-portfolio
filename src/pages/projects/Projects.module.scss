@@ -1,5 +1,10 @@
 @import '../../styles/Colors.module';
-
+@media (hover:none){
+    .Projects .container .projects .project .infoContainer{
+        opacity: 1 !important;
+        transform: translateY(0%) !important;
+    }
+}
 .Projects{
     min-height: 100vh;
     min-width: 100vw;
@@ -30,6 +35,8 @@
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
+            margin-top: 3rem;
+            gap:3rem;
             .project{
                 position: relative;
                 z-index: 10;
@@ -38,8 +45,7 @@
                 background-position: top;
                 height: 70vh;
                 width: 75%;
-                // padding: 3rem 3.5rem;
-                margin: 3rem auto;
+                margin: 0 auto;
                 display: flex;
                 justify-content: center;
                 align-items:center;
@@ -74,7 +80,7 @@
                 .infoContainer{
                     position: absolute;
                     left: 3rem;
-                    bottom: 3rem;
+                    bottom: 0;
                     right: 3rem;
                     display: flex;
                     justify-content: space-between;
@@ -83,7 +89,7 @@
                         .description{
                             color: $background-color;
                             width: 50%;
-                            // margin: 1rem 0;
+                            margin: 1rem 0;
                         }
                     }
                     .title, .github a{
@@ -164,7 +170,7 @@
                     height: 5rem;
                 }
                 .infoContainer {
-                    bottom: 1rem;
+                    // bottom: 1rem;
                     .info .description{
                         font-size: 0.75rem;
                         width: 80%;
@@ -187,7 +193,7 @@
 @media screen and (max-width:600px){
     .Projects {
         .container{
-            padding: 0 2rem;
+            padding: 5rem 2rem;
             .paginationContainer .title{
                 font-size: 5rem;
             }

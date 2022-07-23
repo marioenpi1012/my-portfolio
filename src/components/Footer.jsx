@@ -11,6 +11,7 @@ const Footer = () => {
                     <a 
                         href="https://www.linkedin.com/in/pineda-mario/" 
                         target='_blank'
+                        rel="noreferrer"
                         >
                         <FaLinkedin />
                     </a>
@@ -19,6 +20,7 @@ const Footer = () => {
                     <a 
                         href="https://github.com/marioenpi1012"
                         target="_blank"
+                        rel="noreferrer"
                         >
                         <FaGithub />
                     </a>
