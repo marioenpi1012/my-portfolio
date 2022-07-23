@@ -1,6 +1,6 @@
 import {Helmet } from 'react-helmet'
 import emailjs from 'emailjs-com'
-
+import React from 'react';
 const Contact = () => {
     function validation(){
 

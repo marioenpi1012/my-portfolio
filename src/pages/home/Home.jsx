@@ -1,13 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import Mario from '../../assets/images/mario.jpg'
-import {NavLink}  from 'react-router-dom'
 import styles from './Home.module.scss'
-import {motion} from 'framer-motion/dist/framer-motion'
+import {motion} from 'framer-motion'
 import About from '../about/About'
 import Projects from '../projects/Projects'
-import TopArrow from '../../components/ui/TopArrow'
-import { useInView } from 'framer-motion/dist/framer-motion'
-import SayHello from '../../components/SayHello'
 const Home = () => {
     const click = () =>{
         // window.scrollBy(0, `${aboutRef.current.clientHeight}`)

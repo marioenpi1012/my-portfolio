@@ -1,11 +1,7 @@
 import React from 'react'
 import {Helmet} from 'react-helmet'
-import pic from '../../assets/images/mario.jpg'
-import {NavLink}  from 'react-router-dom'
 import styles from './About.module.scss'
-import {FaCaretUp} from 'react-icons/fa'
-import { motion } from 'framer-motion/dist/framer-motion'
-import TopArrow from '../../components/ui/TopArrow'
+import { motion } from 'framer-motion'
 const About = () => {
     const variants ={
         hidden:{
@@ -38,12 +34,8 @@ const About = () => {
         }
     }
     return (
-        <motion.div 
+        <div 
             className={styles.About}
-            // initial='hidden'
-            // whileInView='animate'
-            // viewport={{once:false}}
-            // transition={{amount:0.8, duration:1}}
             >
             <Helmet>
                 <title>Mario Pineda | About</title>
@@ -54,7 +46,7 @@ const About = () => {
                     variants={leftVariants}
                     initial='hidden'
                     whileInView='animate'
-                    viewport={{once:false, amount:0.9}}
+                    viewport={{once:false, amount:0.5}}
                     transition={{duration:1}}
                     >
                     <p>
@@ -68,7 +60,7 @@ const About = () => {
                     initial='hidden'
                     whileInView='animate'
                     transition={{duration:1}}
-                    viewport={{once:false, amount:0.9}}
+                    viewport={{once:false, amount:1}}
                     >
                     <div className={styles.pagination}>01</div>
                     <div className={styles.title}>About</div>
@@ -79,7 +71,7 @@ const About = () => {
                     initial='hidden'
                     whileInView='animate'
                     transition={{duration:1}}
-                    viewport={{amount:0.9, once:false}}
+                    viewport={{amount:0.8, once:false}}
                     >
                     <p>
                         Hi I'm Mario; a Front end developer with 
@@ -93,7 +85,7 @@ const About = () => {
 
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 

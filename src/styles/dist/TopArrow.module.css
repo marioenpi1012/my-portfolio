@@ -1,0 +1,21 @@
+.topArrow {
+  position: fixed;
+  z-index: 90;
+  height: 50px;
+  width: 50px;
+  top: auto;
+  left: auto;
+  bottom: 5%;
+  right: 5%;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  -webkit-border-radius: 50%;
+  -mox-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}

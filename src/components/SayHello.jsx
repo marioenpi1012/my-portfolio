@@ -1,10 +1,7 @@
 import React from 'react'
 import styles from '../styles/SayHello.module.scss'
-import {motion} from 'framer-motion/dist/framer-motion'
+import {motion} from 'framer-motion'
 const SayHello = () => {
-    const wavingHandVariants ={
-        
-    }
     return (
         <div className={styles.SayHello}>
             <div className={styles.container}>

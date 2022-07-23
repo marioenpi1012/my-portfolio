@@ -5,7 +5,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 import Project from '../../components/Project'
 import styles from './Projects.module.scss'
 import projects from '../../data/data'
-import {motion, AnimatePresence} from 'framer-motion/dist/framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 const Projects = () => {
     const location = useLocation()
     const pageVariants = {
@@ -55,7 +55,7 @@ const Projects = () => {
                     initial='hidden'
                     whileInView='animate'
                     transition={{duration:1}}
-                    viewport={{once:false, amount:0.9}}
+                    viewport={{once:false, amount:0.5}}
                     >
                     <div className={styles.pagination}>{location.pathname === '/' ? "02" : "01" }</div>
                     <div className={styles.title}>work</div>

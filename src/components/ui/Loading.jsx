@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../../styles/Loading.module.scss'
-import { motion } from 'framer-motion/dist/framer-motion'
+import { motion } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
 const Loading = () => {
     const variants = {

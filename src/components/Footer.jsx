@@ -1,3 +1,4 @@
+import React from "react";
 import {FaLinkedin, FaGithub} from "react-icons/fa"
 import styles from '../styles/Footer.module.scss';
 import SayHello from "./SayHello";

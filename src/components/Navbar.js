@@ -1,9 +1,8 @@
 import React, {useEffect} from 'react'
 import {NavLink}  from 'react-router-dom'
-import {FaBars, FaTimes, FaLinkedin} from 'react-icons/fa'
 import {useState} from 'react'
 import styles from '../styles/Nav.module.scss'
-import {motion} from 'framer-motion/dist/framer-motion'
+import {motion} from 'framer-motion'
 const Navbar = () => {
     const [close, setClose] = useState(true)
     useEffect(()=>{

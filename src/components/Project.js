@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {FaGithub} from 'react-icons/fa';
 import styles from '../pages/projects/Projects.module.scss'
-import {motion} from 'framer-motion/dist/framer-motion'
+import {motion} from 'framer-motion'
 const Project = ({project}) => {
     const [mouse, setMouse] = useState({x:0,y:0,active:false})
     const viewCursor = (e) =>{
@@ -32,7 +32,7 @@ const Project = ({project}) => {
         }
     }
     return (
-        <a href={project.liveWebsite} target='_blank'>
+        <a href={project.liveWebsite} target='_blank' rel='noreferrer'>
             <motion.div
                 style={{backgroundImage:`url(${project.image})`}}
                 className={styles.project}
@@ -64,7 +64,7 @@ const Project = ({project}) => {
                         <motion.div
                             className={styles.description}>{project.description}</motion.div>
                     </motion.div>
-                    <div className={styles.github}><a href={project.code} target='_blank'><FaGithub /></a></div>
+                    <div className={styles.github}><a href={project.code} target='_blank' rel='noreferrer'><FaGithub /></a></div>
                 </motion.div>
             </motion.div>
         </a>
