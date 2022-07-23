@@ -27,6 +27,16 @@ const Projects = () => {
             transform:"translate3d(-25%,0,0)"
         }
     }
+    const leftVariants = {
+        hidden:{
+            opacity:0,
+            x:'-100px',
+        },
+        animate:{
+            opacity:1,
+            x:0
+        }
+    }
     return (
         <motion.div 
             className={styles.Projects}
@@ -39,10 +49,17 @@ const Projects = () => {
                 <title>Mario Pineda | Projects </title>
             </Helmet>
             <div className={styles.container}>
-                <div className={styles.paginationContainer}>
+                <motion.div 
+                    className={styles.paginationContainer}
+                    variants={leftVariants}
+                    initial='hidden'
+                    whileInView='animate'
+                    transition={{duration:1}}
+                    viewport={{once:false, amount:0.9}}
+                    >
                     <div className={styles.pagination}>{location.pathname === '/' ? "02" : "01" }</div>
                     <div className={styles.title}>work</div>
-                </div>
+                </motion.div>
                 <motion.div className={styles.projects} >
                 <AnimatePresence exitBeforeEnter>
                     {

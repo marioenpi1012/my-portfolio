@@ -9,40 +9,9 @@ import TopArrow from '../../components/ui/TopArrow'
 import { useInView } from 'framer-motion/dist/framer-motion'
 import SayHello from '../../components/SayHello'
 const Home = () => {
-
-    const [show,setShow] = useState(false)
-    const [lastYPos, setLastYPos] = useState(0)
-    const ref = useRef(null)
-    const aboutRef = useRef()
-    const isInView = useInView(aboutRef,{once:true,amount:0.75})
-    useEffect(()=>{
-        console.log({isInView})
-        window.onscroll = showFunction
-
-
-    },[lastYPos])
-    const showFunction = () =>{
-        const yPos = window.scrollY;
-        const isScrollingDown = yPos > lastYPos;
-        setLastYPos(yPos)
-        if(isInView){
-            if(isScrollingDown){
-                setShow(true)
-            }else{
-                setShow(false)
-            }
-        }else if(!isInView){
-            if(isScrollingDown){
-                setShow(true)
-            }else{
-                setShow(false)
-            }
-        }
-    }
-    
-        
     const click = () =>{
-        window.scrollBy(0, `${aboutRef.current.clientHeight}`)
+        // window.scrollBy(0, `${aboutRef.current.clientHeight}`)
+        window.scrollBy(0, `${window.innerHeight}`)
     }
     const variants={
         initial:{
@@ -91,11 +60,8 @@ const Home = () => {
                 </div>
             </div>
         </motion.div>
-        <div ref={aboutRef}>
-            <About />
-        </div>
+        <About />
         <Projects/>
-        <TopArrow show={show} />
         </>
     )
 }

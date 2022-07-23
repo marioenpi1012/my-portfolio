@@ -41,10 +41,9 @@ const Project = ({project}) => {
                 initial='hidden'
                 whileHover='animate'
                 >
-                <motion.div
+                <div
                     className={styles.pageOverlay}
-
-                    ></motion.div>
+                    ></div>
                 <motion.div
                     className={styles.view}
                     variants={variants}

@@ -8,7 +8,7 @@ const Navbar = () => {
     const [close, setClose] = useState(true)
     useEffect(()=>{
         if(close){
-            document.querySelector('body').style.overflow ='unset'
+            document.querySelector('body').style.overflow =''
             console.log(close)
             
         }else{
@@ -47,8 +47,8 @@ const Navbar = () => {
     }
     const variants ={
         hidden:{
-            // opacity:0,
-            // y:'10px'
+            opacity:0,
+            y:'10px'
         },
         animate:{
             opacity:1,

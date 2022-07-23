@@ -10,15 +10,33 @@ import Home from './pages/home/Home'
 import { useEffect, useState } from 'react'
 import Loading from './components/ui/Loading'
 import { AnimatePresence } from 'framer-motion/dist/framer-motion'
+import TopArrow from './components/ui/TopArrow'
 function App() {
   const [loading,setLoading] = useState()
+  const [show,setShow] = useState(false)
+  const [lastYPos, setLastYPos] = useState(0)
   useEffect(()=>{
-    setLoading(false)
-    // setTimeout(()=>{
-    //   setLoading(false)
-    // },9000)
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },8000)
+    window.addEventListener('scroll', showFunction, false)
+    return ()=>{
+      window.removeEventListener('scroll',showFunction, false)
+    }
   },[])
   const location = useLocation()
+  const showFunction = () =>{
+    const yPos = window.scrollY;
+    const isScrollingDown = yPos > lastYPos;
+    if(yPos > (window.innerHeight) & isScrollingDown){
+      console.log(window.innerHeight)
+      setShow(true)
+    }else{
+      setShow(false)
+    }
+    setLastYPos(yPos)
+  }
   return (
     <div className="App">
     <Helmet>
@@ -38,7 +56,7 @@ function App() {
           <Route path='/contact'  element={<Contact />} />
         </Routes>
     </AnimatePresence>
-    
+    <TopArrow show={show} />
     <Footer />
     </div>
     

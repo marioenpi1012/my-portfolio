@@ -12,8 +12,7 @@
     width: 100%;
     .container{
         @include Container;
-        padding-top: 3rem;
-        padding: 0 5rem;
+        padding: 3rem 5rem;
         .paginationContainer{
             display: flex;
             flex-direction:row;

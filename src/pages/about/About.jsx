@@ -40,10 +40,10 @@ const About = () => {
     return (
         <motion.div 
             className={styles.About}
-            initial='hidden'
-            whileInView='animate'
-            viewport={{once:false}}
-            transition={{amount:0.8, duration:1}}
+            // initial='hidden'
+            // whileInView='animate'
+            // viewport={{once:false}}
+            // transition={{amount:0.8, duration:1}}
             >
             <Helmet>
                 <title>Mario Pineda | About</title>
@@ -52,6 +52,10 @@ const About = () => {
                 <motion.div 
                     className={styles.quote}
                     variants={leftVariants}
+                    initial='hidden'
+                    whileInView='animate'
+                    viewport={{once:false, amount:0.9}}
+                    transition={{duration:1}}
                     >
                     <p>
                     Let's work together to create high
@@ -61,6 +65,10 @@ const About = () => {
                 <motion.div 
                     className={styles.paginationContainer}
                     variants={variants}
+                    initial='hidden'
+                    whileInView='animate'
+                    transition={{duration:1}}
+                    viewport={{once:false, amount:0.9}}
                     >
                     <div className={styles.pagination}>01</div>
                     <div className={styles.title}>About</div>
@@ -68,6 +76,10 @@ const About = () => {
                 <motion.div 
                     className={styles.description}
                     variants={rightVariants}
+                    initial='hidden'
+                    whileInView='animate'
+                    transition={{duration:1}}
+                    viewport={{amount:0.9, once:false}}
                     >
                     <p>
                         Hi I'm Mario; a Front end developer with 
