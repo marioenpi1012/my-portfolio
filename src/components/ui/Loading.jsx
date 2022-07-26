@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../../styles/Loading.module.scss'
 import { motion } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
@@ -58,10 +58,16 @@ const Loading = () => {
     }
     const pageVariants = {
         initial:{
-            opacity:1
+            opacity:1,
+            transition:{
+                when:'afterChildren'
+            }
         },
         animate:{
-            opacity:1
+            opacity:1,
+            transition:{
+                when:'afterChildren'
+            }
         },
         end:{
             opacity:0,
@@ -78,7 +84,7 @@ const Loading = () => {
             exit='end'
             transition={{duration:1}}
             >
-            <div className={styles.container}>
+            <motion.div className={styles.container}>
                 <motion.span
                     variants={leftTextVariants}
                     initial='start'
@@ -109,7 +115,7 @@ const Loading = () => {
                     Pineda
                 </motion.span>
                 
-            </div>
+            </motion.div>
         </motion.div>
     )
 }

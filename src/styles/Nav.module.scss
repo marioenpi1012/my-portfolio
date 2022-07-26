@@ -19,10 +19,7 @@
         font-size: 1.5rem;
         padding-top: 18px;
         padding-bottom: 18px;
-        margin-right:auto;
-        margin-left: auto;
         align-items:center;
-        width:100%;
         .leftNav{
             z-index: 20;
             .color{
@@ -40,7 +37,7 @@
         }
         .navOpen{
             -webkit-clip-path:circle(125vw at 90% -10%) !important;
-            clip-path: circle(125vw at 90% -10%);
+            clip-path: circle(125vw at 90% -10%) !important;
         }
         .navLinks{
             position: fixed;
@@ -162,21 +159,33 @@
     }
 }
 @media screen and (max-width:1200px){
-    .navContainer .navbar .navOpen{
-        -webkit-clip-path:circle(150vw at 90% -10%) !important;
-        clip-path: circle(150vw at 90% -10%);
+    .navContainer .navbar {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        .navLinks{
+            -webkit-clip-path:circle(100px at 90% -15%) !important;
+            clip-path: circle(100px at 90% -15%);
+        }
+        .navOpen{
+            -webkit-clip-path:circle(150vw at 90% -10%) !important;
+            clip-path: circle(150vw at 90% -10%);
+        }
     }
 }
 @media screen and (max-width:768px){
-    .navContainer .navbar .navLinks{
-        -webkit-clip-path:circle(100px at 90% -15%);
-        clip-path: circle(100px at 90% -15%);
-        ul li div{
-            a{
-                font-size: 3rem;
-            }
-            .subtitle{
-                font-size: 0.75rem;
+    .navContainer .navbar {
+        padding-left:3rem;
+        padding-right:3rem;
+        .navLinks{
+            -webkit-clip-path:circle(100px at 90% -15%);
+            clip-path: circle(100px at 90% -15%);
+            ul li div{
+                a{
+                    font-size: 3rem;
+                }
+                .subtitle{
+                    font-size: 0.75rem;
+                }
             }
         }
     }
@@ -191,7 +200,7 @@
             }
             .navOpen{
                 -webkit-clip-path:circle(265vw at 90% -10%) !important;
-                clip-path: circle(265vw at 90% -10%);
+                clip-path: circle(265vw at 90% -10%) !important;
             }
         }
     }

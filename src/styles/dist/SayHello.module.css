@@ -9,8 +9,11 @@
 }
 .SayHello .container {
   position: relative;
-  max-width: none;
-  padding: 11rem 5rem;
+  width: 100%;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 0 8rem;
   width: 100%;
   display: flex;
   align-items: flex-start;

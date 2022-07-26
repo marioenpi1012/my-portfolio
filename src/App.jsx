@@ -13,11 +13,11 @@ import Loading from './components/ui/Loading'
 import { AnimatePresence } from 'framer-motion'
 import TopArrow from './components/ui/TopArrow'
 function App() {
-  const [loading,setLoading] = useState(false)
+  const [loading,setLoading] = useState()
   const [show,setShow] = useState(false)
   const [lastYPos, setLastYPos] = useState(0)
   useEffect(()=>{
-    setLoading(false)
+    setLoading(true)
     setTimeout(()=>{
       setLoading(false)
     },8000)
@@ -44,15 +44,13 @@ function App() {
     </Helmet> 
     <Navbar  />
     <AnimatePresence>
-      {loading && <Loading key='loading' />}
+      {loading && <Loading key='loading'  />}
     </AnimatePresence>
     <AnimatePresence exitBeforeEnter >
       <Routes key={location.pathname} location={location}>
-          <Route exact path='/' element={<Home />}>
-            <Route path='/about' element={<About />} />
-          </Route> 
+          <Route exact path='/' element={<Home />}/>
+          <Route exact path='/about' element={<About />}/>
           <Route path='/projects' element={<Projects/>} />
-          <Route path='/about'   element={<About />} />
           <Route path='/contact'  element={<Contact />} />
         </Routes>
     </AnimatePresence>

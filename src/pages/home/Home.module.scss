@@ -1,6 +1,7 @@
 @import '../../styles/Colors.module.scss';
 
 .Home{
+    @include Section;
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
@@ -67,6 +68,7 @@
 
 @media screen and (max-width:768px){
     .Home{
+        margin-bottom: 5rem;
         .introContainer{
             .image img{
                 width:30vw;

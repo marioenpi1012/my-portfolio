@@ -5,6 +5,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 import Project from '../../components/Project'
 import styles from './Projects.module.scss'
 import projects from '../../data/data'
+import Pagination from '../../components/ui/Pagination';
 import {motion, AnimatePresence} from 'framer-motion'
 const Projects = () => {
     const location = useLocation()
@@ -39,7 +40,7 @@ const Projects = () => {
     }
     return (
         <motion.div 
-            className={styles.Projects}
+            className={location.pathname === '/projects' ?`${styles.Projects} ${styles.ProjectsPage}` : styles.Projects}
             variants={pageVariants}
             initial='initial'
             animate='animate'
@@ -49,17 +50,7 @@ const Projects = () => {
                 <title>Mario Pineda | Projects </title>
             </Helmet>
             <div className={styles.container}>
-                <motion.div 
-                    className={styles.paginationContainer}
-                    variants={leftVariants}
-                    initial='hidden'
-                    whileInView='animate'
-                    transition={{duration:1}}
-                    viewport={{once:false, amount:0.5}}
-                    >
-                    <div className={styles.pagination}>{location.pathname === '/' ? "02" : "01" }</div>
-                    <div className={styles.title}>work</div>
-                </motion.div>
+                <Pagination number={location.pathname === '/projects' ? '01' : '02'} title='Work' left={true} />
                 <motion.div className={styles.projects} >
                 <AnimatePresence exitBeforeEnter>
                     {

@@ -1,0 +1,193 @@
+.Contact {
+  min-height: 32px;
+  margin-bottom: 15rem;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-top: 10rem;
+  width: 100%;
+  height: 100%;
+}
+.Contact .container {
+  position: relative;
+  width: 100%;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 0 8rem;
+}
+.Contact .container .subtitle {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.Contact .container .subtitle p {
+  font-size: 2.5rem;
+  text-align: start;
+  width: 65vw;
+  color: black;
+  line-height: 120%;
+  font-weight: 100;
+}
+.Contact .container .form {
+  margin-top: 5rem;
+  position: relative;
+  width: 80%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 15rem;
+}
+.Contact .container .form .message {
+  width: 100%;
+  max-height: 10rem;
+  height: 100%;
+  position: relative;
+}
+.Contact .container .form .message textarea {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  color: #7f7f7f;
+}
+.Contact .container .form .message textarea:focus + label span, .Contact .container .form .message textarea:valid + label span {
+  font-size: 0.875rem;
+  color: black;
+  transform: translateY(-1000%);
+}
+.Contact .container .form .message textarea:focus + label::after, .Contact .container .form .message textarea:valid + label::after {
+  transform: translateX(0%);
+}
+.Contact .container .form .message .textareaLabel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+.Contact .container .form .message .textareaLabel::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+}
+.Contact .container .form .message .textareaLabel span {
+  position: absolute;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.Contact .container .form .name, .Contact .container .form .email {
+  max-height: 2rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.Contact .container .form .name input, .Contact .container .form .email input {
+  width: 100%;
+  height: 100%;
+  padding-top: 1rem;
+  outline: none;
+  border: none;
+  color: #7f7f7f;
+}
+.Contact .container .form .name input:focus + label span, .Contact .container .form .name input:valid + label span, .Contact .container .form .email input:focus + label span, .Contact .container .form .email input:valid + label span {
+  font-size: 0.875rem;
+  color: black;
+  transform: translateY(-150%);
+}
+.Contact .container .form .name input:focus + label::after, .Contact .container .form .name input:valid + label::after, .Contact .container .form .email input:focus + label::after, .Contact .container .form .email input:valid + label::after {
+  transform: translateX(0%);
+}
+.Contact .container .form .name input:-webkit-autofill, .Contact .container .form .email input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: #7f7f7f !important;
+}
+.Contact .container .form .name .textInputLabel, .Contact .container .form .email .textInputLabel {
+  position: absolute;
+  left: 0;
+  bottom: auto;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+}
+.Contact .container .form .name .textInputLabel::after, .Contact .container .form .email .textInputLabel::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+}
+.Contact .container .form .name .textInputLabel span, .Contact .container .form .email .textInputLabel span {
+  position: absolute;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+.Contact .container .form .submitBtn {
+  -webkit-appearance: button;
+  -mox-appearance: button;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .Contact {
+    margin-bottom: 10rem;
+  }
+  .Contact .container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .Contact .container .form {
+    margin-left: 10rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Contact {
+    margin-bottom: 5rem;
+  }
+  .Contact .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .Contact .container .subtitle p {
+    font-size: 1.25rem;
+  }
+  .Contact .container .form {
+    margin-left: 5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .Contact .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .Contact .container .subtitle p {
+    font-size: 1.125rem;
+    width: 75vw;
+  }
+  .Contact .container .form {
+    margin-left: 2rem;
+  }
+}

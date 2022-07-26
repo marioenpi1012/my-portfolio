@@ -1,13 +1,15 @@
-import React from 'react'
-import Mario from '../../assets/images/mario.jpg'
-import styles from './Home.module.scss'
-import {motion} from 'framer-motion'
-import About from '../about/About'
-import Projects from '../projects/Projects'
+import React, {useRef} from 'react';
+import Mario from '../../assets/images/mario.jpg';
+import styles from './Home.module.scss';
+import {motion} from 'framer-motion';
+import About from '../about/About';
+import Projects from '../projects/Projects';
+import Quote from '../../components/ui/Quote';
+
 const Home = () => {
+    const quoteRef = useRef(null)
     const click = () =>{
-        // window.scrollBy(0, `${aboutRef.current.clientHeight}`)
-        window.scrollBy(0, `${window.innerHeight}`)
+        quoteRef.current.scrollIntoView(true,{behavior:"smooth"})
     }
     const variants={
         initial:{
@@ -41,12 +43,6 @@ const Home = () => {
                     <p>
                         A Front end developer.
                     </p>
-                    {
-                    //     <NavLink to='/projects' >
-                    // <input type="button" value="My Projects"
-                    // />
-                    // </NavLink>
-                }
                 </div>
                 
             </div>
@@ -56,6 +52,7 @@ const Home = () => {
                 </div>
             </div>
         </motion.div>
+        <Quote ref={quoteRef} />
         <About />
         <Projects/>
         </>
