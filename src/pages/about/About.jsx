@@ -6,18 +6,9 @@ import { useLocation } from 'react-router-dom'
 import Mario from '../../assets/images/mario.jpg'
 import Pagination from '../../components/ui/Pagination'
 import Skills from '../../components/ui/Skill'
-const About = () => {
+import Quote from '../../components/ui/Quote'
+const About = ({},ref) => {
     const location = useLocation()
-    const variants ={
-        hidden:{
-            opacity:0,
-            scale:0.5,
-        },
-        animate:{
-            opacity:1,
-            scale:1,
-        }
-    }
     const leftVariants = {
         hidden:{
             opacity:0,
@@ -26,6 +17,9 @@ const About = () => {
         animate:{
             opacity:1,
             x:0,
+            transition:{
+                duration:1,
+            }
         }
     }
     const rightVariants = {
@@ -40,12 +34,14 @@ const About = () => {
     }
     return (
         <div 
+            ref={ref}
             className={location.pathname === '/about' ? `${styles.About} ${styles.AboutPage}` :styles.About}
             >
             <Helmet>
                 <title>Mario Pineda | About</title>
             </Helmet>
             <div className={styles.container}>
+                {location.pathname === '/' && <Quote />}
                 <Pagination number='01' title='about' />
                 <motion.div 
                     className={styles.description}
@@ -104,4 +100,4 @@ const About = () => {
     )
 }
 
-export default About;
+export default React.forwardRef(About);

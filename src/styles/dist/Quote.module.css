@@ -12,14 +12,6 @@
   color: black;
   box-sizing: border-box;
 }
-.Quote .container {
-  position: relative;
-  width: 100%;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
-  padding: 0 8rem;
-}
 
 @media screen and (max-width: 1200px) {
   .Quote {
@@ -36,9 +28,7 @@
   .Quote {
     padding-top: 0;
   }
-  .Quote .container {
+  .Quote p {
     font-size: 1.75rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }

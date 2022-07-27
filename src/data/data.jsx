@@ -6,19 +6,18 @@ import UrlShorteningImg from '../assets/images/url_shortening.png'
 const projectsInfo = [
         {
             id :0,
-            title: 'Todo App',
-            image: todoImg,
-            description: "Build with HTML/ SCSS and JavaScript A todo app that stores its data in local storage as long with a dark and light theme. Design Credit to FrontEnd Mentor.",
-            liveWebsite: 'https://marioenpi1012.github.io/todo-app/',
-            code:'https://github.com/marioenpi1012/todo-app'
+            title: 'El Panamericano',
+            image: '',
+            description: "",
+            liveWebsite: 'https://elpanamericano.vercel.app',
         },
         {
             id:1,
-            title: 'Insure Landing Page',
-            image: InsureLPImg,
-            description: "Build with HTML/ SCSS and JavaScript A company landing page Design Credit to FrontEnd Mentor.",
-            liveWebsite: 'https://marioenpi1012.github.io/InsureLandingPage/',
-            code : 'https://github.com/marioenpi1012/InsureLandingPage'
+            title: 'E-commerce',
+            image: '',
+            description: "",
+            liveWebsite: 'https://marioenpi1012.github.io/Ecomerce-with-react-redux',
+            code : 'https://github.com/marioenpi1012/Ecomerce-with-react-redux'
         },
         {
             id:2,
@@ -36,16 +35,22 @@ const projectsInfo = [
             liveWebsite:'https://marioenpi1012.github.io/url_shortening/',
             code:'https://github.com/marioenpi1012/url_shortening'
         },
-        // {
-        //     id:4, 
-        //     title:'E-commerce',
-        //     liveWebsite:'https://marioenpi1012.github.io/Ecomerce-with-react-redux',
-        //     code:'https://github.com/marioenpi1012/Ecomerce-with-react-redux'
-        // },{
-        //     id:5,
-        //     title:'El Panamericano',
-        //     liveWebsite:'https://elpanamericano.vercel.app'
-        // }
+        {
+            id:4,
+            title: 'Insure Landing Page',
+            image: InsureLPImg,
+            description: "Build with HTML/ SCSS and JavaScript A company landing page Design Credit to FrontEnd Mentor.",
+            liveWebsite: 'https://marioenpi1012.github.io/InsureLandingPage/',
+            code : 'https://github.com/marioenpi1012/InsureLandingPage'
+        },
+        {
+            id :5,
+            title: 'Todo App',
+            image: todoImg,
+            description: "Build with HTML/ SCSS and JavaScript A todo app that stores its data in local storage as long with a dark and light theme. Design Credit to FrontEnd Mentor.",
+            liveWebsite: 'https://marioenpi1012.github.io/todo-app/',
+            code:'https://github.com/marioenpi1012/todo-app'
+        },
 
 ]
 

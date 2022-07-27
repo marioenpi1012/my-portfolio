@@ -8,9 +8,9 @@
     text-align: start;
     color: $font-color;
     box-sizing: border-box;
-    .container{
-        @include Container;
-    }
+    // .container{
+    //     @include Container;
+    // }
 }
 @media screen and (max-width:1200px){
     .Quote{
@@ -26,11 +26,14 @@
 @media screen and (max-width:600px){
     .Quote{
         padding-top:0;
-        .container{
-            // font-size: 1rem;
-            font-size: 1.75rem;
-            padding-left:2rem;
-            padding-right:2rem;
+        p{
+            font-size:1.75rem;
         }
+        // .container{
+        //     // font-size: 1rem;
+        //     font-size: 1.75rem;
+        //     padding-left:1.5rem;
+        //     padding-right:1.5rem;
+        // }
     }
 }

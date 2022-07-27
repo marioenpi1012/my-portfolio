@@ -28,16 +28,6 @@ const Projects = () => {
             transform:"translate3d(-25%,0,0)"
         }
     }
-    const leftVariants = {
-        hidden:{
-            opacity:0,
-            x:'-100px',
-        },
-        animate:{
-            opacity:1,
-            x:0
-        }
-    }
     return (
         <motion.div 
             className={location.pathname === '/projects' ?`${styles.Projects} ${styles.ProjectsPage}` : styles.Projects}
@@ -55,7 +45,7 @@ const Projects = () => {
                 <AnimatePresence exitBeforeEnter>
                     {
                         projects.map((project,i) =>(
-                            location.pathname === '/' ? i < 2 &&
+                            location.pathname === '/' ? i < 3 &&
                             <Project project={project} key={i} id={i}/>
                             :<Project project={project} key={i} id={i} />
                         ))

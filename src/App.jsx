@@ -17,10 +17,10 @@ function App() {
   const [show,setShow] = useState(false)
   const [lastYPos, setLastYPos] = useState(0)
   useEffect(()=>{
-    setLoading(true)
-    setTimeout(()=>{
-      setLoading(false)
-    },8000)
+    // setLoading(true)
+    // setTimeout(()=>{
+    //   setLoading(false)
+    // },8000)
     window.addEventListener('scroll', showFunction, false)
     return ()=>{
       window.removeEventListener('scroll',showFunction, false)

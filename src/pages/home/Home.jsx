@@ -7,9 +7,10 @@ import Projects from '../projects/Projects';
 import Quote from '../../components/ui/Quote';
 
 const Home = () => {
-    const quoteRef = useRef(null)
+    const aboutRef = useRef(null)
     const click = () =>{
-        quoteRef.current.scrollIntoView(true,{behavior:"smooth"})
+        // aboutRef.current.scrollIntoView(true,{behavior:"smooth"})
+        window.scrollTo(0,`${aboutRef.current.clientHeight}`)
     }
     const variants={
         initial:{
@@ -52,8 +53,7 @@ const Home = () => {
                 </div>
             </div>
         </motion.div>
-        <Quote ref={quoteRef} />
-        <About />
+        <About ref={aboutRef} />
         <Projects/>
         </>
     )
