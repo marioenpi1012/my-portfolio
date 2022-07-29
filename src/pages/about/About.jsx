@@ -49,7 +49,7 @@ const About = ({},ref) => {
                     initial='hidden'
                     whileInView='animate'
                     transition={{duration:1}}
-                    viewport={{amount:0.8, once:false}}
+                    viewport={{amount:0.5, once:false}}
                     >
                     <p>
                         Hi I'm Mario; a Front end developer with 
@@ -68,7 +68,7 @@ const About = ({},ref) => {
                                 variants={leftVariants}
                                 initial='hidden'
                                 whileInView='animate'
-                                viewport={{once:false, amount:0.8}}
+                                viewport={{once:false, amount:0.5}}
                                 transition={{duration:1}}
                                 >
                                 <img src={Mario} alt="" />
@@ -78,7 +78,7 @@ const About = ({},ref) => {
                                 variants={rightVariants}
                                 initial='hidden'
                                 whileInView='animate'
-                                viewport={{once:false,amount:0.8}}
+                                viewport={{once:false,amount:0.5}}
                                 transition={{duration:1}}
                                 >
                                 <p>
