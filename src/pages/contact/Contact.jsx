@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './Contact.module.scss'
 import { motion } from 'framer-motion'
 import Pagination from '../../components/ui/Pagination';
+import AnimatedPage from '../../components/ui/AnimatedPage';
 const Contact = () => {
     function validation(){
 
@@ -30,67 +31,73 @@ const Contact = () => {
         }
     }
     return (
-        <div className={styles.Contact}>
-            <Helmet>
-                <title>Mario Pineda | Contact Me</title>
-            </Helmet>
-            <div className={styles.container}>
-                <Pagination number='01' title='Hit Me' />
-                <motion.div 
-                    className={styles.subtitle}
-                    variants={rightVariants}
-                    initial='hidden'
-                    whileInView='animate'
-                    viewport={{once:false,amount:0.5}}
-                    transition={{duration:1}}
-                    >
-                    <p className={styles.subtitle}>Let's Work Together and Create Something Meaningful!</p>
-                </motion.div>
-                <form className={styles.form} onSubmit={sendEmail} id='form' onChange={validation}>
-                    <div className={styles.name}>
-                        <input 
-                            type="text"
-                            name='name' 
-                            required
+        <AnimatedPage >
+            <div 
+                className={styles.Contact}
+                
+                >
+                <Helmet>
+                    <title>Mario Pineda | Contact Me</title>
+                </Helmet>
+                <div className={styles.container}>
+                    <Pagination number='01' title='Hit Me' />
+                    <motion.div 
+                        className={styles.subtitle}
+                        variants={rightVariants}
+                        initial='hidden'
+                        whileInView='animate'
+                        viewport={{once:false,amount:0.5}}
+                        transition={{duration:1}}
+                        >
+                        <p className={styles.subtitle}>Let's Work Together and Create Something Meaningful!</p>
+                    </motion.div>
+                    <form className={styles.form} onSubmit={sendEmail} id='form' onChange={validation}>
+                        <div className={styles.name}>
+                            <input 
+                                type="text"
+                                name='name' 
+                                required
+                                />
+                            <label className={styles.textInputLabel} htmlFor="name">
+                                <span>
+                                    Name
+                                </span>
+                            </label>
+                            
+                        </div>
+                        <div className={styles.email}>
+                            <input 
+                                type="text" 
+                                name='email' required/>
+                            <label htmlFor="email" className={styles.textInputLabel}>
+                                <span>
+                                    Email
+                                </span>
+                            </label>
+                        </div>
+                        <div className={styles.message}>
+                            <textarea 
+                                type="text"  
+                                name='message' 
+                                required
                             />
-                        <label className={styles.textInputLabel} htmlFor="name">
-                            <span>
-                                Name
-                            </span>
-                        </label>
-                        
-                    </div>
-                    <div className={styles.email}>
-                        <input 
-                            type="text" 
-                            name='email' required/>
-                        <label htmlFor="email" className={styles.textInputLabel}>
-                            <span>
-                                Email
-                            </span>
-                        </label>
-                    </div>
-                    <div className={styles.message}>
-                        <textarea 
-                            type="text"  
-                            name='message' 
-                            required
-                        />
-                        <label htmlFor="message" className={styles.textareaLabel}>
-                            <span>
-                                Message
-                            </span>
-                        </label>
-                    </div>
-                    <motion.input
-                        type="submit" 
-                        className={styles.submitBtn}
-                        whileHover={{scale:1.1}}
-                        whileTap={{scale:0.9}}
-                        />
-                </form>
+                            <label htmlFor="message" className={styles.textareaLabel}>
+                                <span>
+                                    Message
+                                </span>
+                            </label>
+                        </div>
+                        <motion.input
+                            type="submit" 
+                            className={styles.submitBtn}
+                            whileHover={{scale:1.1}}
+                            whileTap={{scale:0.9}}
+                            />
+                    </form>
+                </div>
             </div>
-        </div>
+        </AnimatedPage>
+
     )
 }
 

@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 import About from '../about/About';
 import Projects from '../projects/Projects';
 import Quote from '../../components/ui/Quote';
+import AnimatedPage from '../../components/ui/AnimatedPage';
 
 const Home = () => {
     const aboutRef = useRef(null)
@@ -12,26 +13,12 @@ const Home = () => {
         // aboutRef.current.scrollIntoView(true,{behavior:"smooth"})
         window.scrollTo(0,`${aboutRef.current.clientHeight}`)
     }
-    const variants={
-        initial:{
-            opacity:1,
-        },
-        animate:{
-            opacity:1
-        },
-        exit:{
-            opacity:0
-        }
-    }
+    
     return (
-        <>
+        <AnimatedPage >
         <motion.div 
             className={styles.Home}
-            variants={variants}
-            initial='initial'
-            animate='animate'
-            exit='exit'
-            transition={{duration:1}}
+            
             >
             <div className={styles.introContainer}>
                 <div className={styles.image}>
@@ -55,7 +42,8 @@ const Home = () => {
         </motion.div>
         <About ref={aboutRef} />
         <Projects/>
-        </>
+        </AnimatedPage>
+
     )
 }
 

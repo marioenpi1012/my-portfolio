@@ -7,6 +7,7 @@ import Mario from '../../assets/images/mario.jpg'
 import Pagination from '../../components/ui/Pagination'
 import Skills from '../../components/ui/Skill'
 import Quote from '../../components/ui/Quote'
+import AnimatedPage from '../../components/ui/AnimatedPage'
 const About = ({},ref) => {
     const location = useLocation()
     const leftVariants = {
@@ -33,70 +34,73 @@ const About = ({},ref) => {
         }
     }
     return (
-        <div 
-            ref={ref}
-            className={location.pathname === '/about' ? `${styles.About} ${styles.AboutPage}` :styles.About}
-            >
-            <Helmet>
-                <title>Mario Pineda | About</title>
-            </Helmet>
-            <div className={styles.container}>
-                {location.pathname === '/' && <Quote />}
-                <Pagination number='01' title='about' />
-                <motion.div 
-                    className={styles.description}
-                    variants={rightVariants}
-                    initial='hidden'
-                    whileInView='animate'
-                    transition={{duration:1}}
-                    viewport={{once:false}}
-                    >
-                    <p>
-                        Hi I'm Mario; a Front end developer with 
-                        a wide variety of experience.I like to always
-                        challenge myself with things that interested me
-                        and can add a value to myself
-                        
-                    </p>
-                </motion.div>
-                {
-                    location.pathname === '/about' &&
-                    <div className={styles.aboutPage}>
-                        <div className={styles.aboutWrapper}>
-                            <motion.div 
-                                className={styles.image}
-                                variants={leftVariants}
-                                initial='hidden'
-                                whileInView='animate'
-                                viewport={{once:false, amount:0.5}}
-                                transition={{duration:1}}
-                                >
-                                <img src={Mario} alt="" />
-                            </motion.div>
-                            <motion.div 
-                                className={styles.description}
-                                variants={rightVariants}
-                                initial='hidden'
-                                whileInView='animate'
-                                viewport={{once:false,amount:0.5}}
-                                transition={{duration:1}}
-                                >
-                                <p>
-                                    As a front-end developer, I'm extremely interested in learning and excelling at new technologies, 
-                                    and I've demonstrated my skills in this area through the projects I build shown in my portfolio. 
-                                    I've mastered programs and languages ranging from HTML to JavaScript, 
-                                    and I look forward to mastering more programs as they're developed. 
-                                    I'm also interested in problem-solving, a skill
-                                    I developed while learning and utilizing my front-end developer skills.
-                                </p>
+        <AnimatedPage>
+            <div 
+                ref={ref}
+                className={location.pathname === '/about' ? `${styles.About} ${styles.AboutPage}` :styles.About}
+                >
+                <Helmet>
+                    <title>Mario Pineda | About</title>
+                </Helmet>
+                <div className={styles.container}>
+                    {location.pathname === '/' && <Quote />}
+                    <Pagination number='01' title='about' />
+                    <motion.div 
+                        className={styles.description}
+                        variants={rightVariants}
+                        initial='hidden'
+                        whileInView='animate'
+                        transition={{duration:1}}
+                        viewport={{once:false}}
+                        >
+                        <p>
+                            Hi I'm Mario; a Front end developer with 
+                            a wide variety of experience.I like to always
+                            challenge myself with things that interested me
+                            and can add a value to myself
+                            
+                        </p>
+                    </motion.div>
+                    {
+                        location.pathname === '/about' &&
+                        <div className={styles.aboutPage}>
+                            <div className={styles.aboutWrapper}>
+                                <motion.div 
+                                    className={styles.image}
+                                    variants={leftVariants}
+                                    initial='hidden'
+                                    whileInView='animate'
+                                    viewport={{once:false, amount:0.5}}
+                                    transition={{duration:1}}
+                                    >
+                                    <img src={Mario} alt="" />
                                 </motion.div>
+                                <motion.div 
+                                    className={styles.description}
+                                    variants={rightVariants}
+                                    initial='hidden'
+                                    whileInView='animate'
+                                    viewport={{once:false,amount:0.5}}
+                                    transition={{duration:1}}
+                                    >
+                                    <p>
+                                        As a front-end developer, I'm extremely interested in learning and excelling at new technologies, 
+                                        and I've demonstrated my skills in this area through the projects I build shown in my portfolio. 
+                                        I've mastered programs and languages ranging from HTML to JavaScript, 
+                                        and I look forward to mastering more programs as they're developed. 
+                                        I'm also interested in problem-solving, a skill
+                                        I developed while learning and utilizing my front-end developer skills.
+                                    </p>
+                                    </motion.div>
+                            </div>
+                            <Skills />
                         </div>
-                        <Skills />
-                    </div>
-                }
+                    }
 
+                </div>
             </div>
-        </div>
+        </AnimatedPage>
+
     )
 }
 
