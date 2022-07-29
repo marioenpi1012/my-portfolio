@@ -17,16 +17,16 @@ function App() {
   const [show,setShow] = useState(false)
   const [lastYPos, setLastYPos] = useState(0)
   useEffect(()=>{
-    // setLoading(true)
-    // setTimeout(()=>{
-    //   setLoading(false)
-    // },8000)
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },8000)
     window.addEventListener('scroll', showFunction, false)
     return ()=>{
       window.removeEventListener('scroll',showFunction, false)
     }
-  },[])
-  const location = useLocation()
+  },[]);
+  const location = useLocation();
   const showFunction = () =>{
     const yPos = window.scrollY;
     const isScrollingDown = yPos > lastYPos;
@@ -39,25 +39,24 @@ function App() {
   }
   return (
     <div className="App">
-    <Helmet>
-    <title>Mario Pineda</title>
-    </Helmet> 
-    <Navbar  />
-    <AnimatePresence>
-      {loading && <Loading key='loading'  />}
-    </AnimatePresence>
-    <AnimatePresence exitBeforeEnter >
-      <Routes key={location.pathname} location={location}>
-          <Route exact path='/' element={<Home />}/>
-          <Route exact path='/about' element={<About />}/>
-          <Route path='/projects' element={<Projects/>} />
-          <Route path='/contact'  element={<Contact />} />
-        </Routes>
-    </AnimatePresence>
-    <TopArrow show={show} />
-    <Footer />
+      <Helmet>
+        <title>Mario Pineda</title>
+      </Helmet> 
+      <Navbar  />
+      <AnimatePresence>
+        {loading && <Loading key='loading'  />}
+      </AnimatePresence>
+      <AnimatePresence exitBeforeEnter >
+        <Routes key={location.pathname} location={location}>
+            <Route exact path='/' element={<Home />}/>
+            <Route path='/about' element={<About />}/>
+            <Route path='/projects' element={<Projects/>} />
+            <Route path='/contact'  element={<Contact />} />
+          </Routes>
+      </AnimatePresence>
+      <TopArrow show={show} />
+      <Footer />
     </div>
-    
   );
-  }
+}
 export default App;

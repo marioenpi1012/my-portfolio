@@ -41,7 +41,7 @@ const Contact = () => {
                     variants={rightVariants}
                     initial='hidden'
                     whileInView='animate'
-                    viewport={{once:false,amount:0.8}}
+                    viewport={{once:false,amount:0.5}}
                     transition={{duration:1}}
                     >
                     <p className={styles.subtitle}>Let's Work Together and Create Something Meaningful!</p>

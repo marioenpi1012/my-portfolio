@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from '../../styles/Loading.module.scss'
 import { motion } from 'framer-motion'
-import { useLocation } from 'react-router-dom'
 const Loading = () => {
     const variants = {
         start:{
@@ -20,10 +19,6 @@ const Loading = () => {
                 repeatDelay:2
             }
             ,
-            
-            transitionEnd:{
-
-            }
         }
     }
     const leftTextVariants={
@@ -35,7 +30,6 @@ const Loading = () => {
             opacity:0,
             x:10,
             transition:{
-                type: '' ,
                 duration:1,
                 delay:5
             }
@@ -50,7 +44,6 @@ const Loading = () => {
             opacity:0,
             x:-10,
             transition:{
-                type: '' ,
                 duration:1,
                 delay:5
             }
@@ -73,8 +66,7 @@ const Loading = () => {
             opacity:0,
         }
     }
-    const location = useLocation()
-    console.log(location)
+    
     return (
         <motion.div 
             className={styles.Loading}

@@ -49,7 +49,7 @@ const About = ({},ref) => {
                     initial='hidden'
                     whileInView='animate'
                     transition={{duration:1}}
-                    viewport={{amount:0.5, once:false}}
+                    viewport={{once:false}}
                     >
                     <p>
                         Hi I'm Mario; a Front end developer with 

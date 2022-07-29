@@ -8,8 +8,6 @@ const Navbar = () => {
     useEffect(()=>{
         if(close){
             document.querySelector('body').style.overflow =''
-            console.log(close)
-            
         }else{
             document.querySelector('body').style.overflow ='hidden'
         }
