@@ -2,12 +2,12 @@ import todoImg from '../assets/images/desktop-design-dark.jpg'
 import InsureLPImg from '../assets/images/desktop-preview.jpg'
 import NetflixCloneImg from '../assets/images/netflixClone.png'
 import UrlShorteningImg from '../assets/images/url_shortening.png'
-
+import ElPanamericanoImg from '../assets/images/el panamericano.jpg'
 const projectsInfo = [
         {
             id :0,
             title: 'El Panamericano',
-            image: '',
+            image: ElPanamericanoImg,
             description: "",
             liveWebsite: 'https://elpanamericano.vercel.app',
         },
