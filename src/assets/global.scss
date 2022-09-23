@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 @import '../styles/Colors.module.scss';
 *{
     margin: 0;
@@ -8,14 +9,14 @@
     scroll-behavior: smooth;
 
 }
-body{
-    font-family: 'Inter', sans-serif;
+body{ 
+    font-family: 'Syne', sans-serif;
     background-color: $background-color;
     box-sizing: border-box;
-}
-.App{
     overflow-x: hidden;
+    font-weight:700;
 }
+
 @media screen and (-webkit-min-device-pixel-ratio:0){
     select,
     textarea,

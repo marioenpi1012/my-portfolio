@@ -8,6 +8,8 @@ import Pagination from '../../components/ui/Pagination'
 import Skills from '../../components/ui/Skill'
 import Quote from '../../components/ui/Quote'
 import AnimatedPage from '../../components/ui/AnimatedPage'
+
+
 const About = ({},ref) => {
     const location = useLocation()
     const leftVariants = {
@@ -53,7 +55,7 @@ const About = ({},ref) => {
                         transition={{duration:1}}
                         viewport={{once:false}}
                         >
-                        <p>
+                        <p style={ location.pathname !== '/' ? { fontSize:'1.5rem'} :{ }}>
                             Hi I'm Mario; a Front end developer with 
                             a wide variety of experience.I like to always
                             challenge myself with things that interested me

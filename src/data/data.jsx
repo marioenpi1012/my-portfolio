@@ -2,7 +2,8 @@ import todoImg from '../assets/images/desktop-design-dark.jpg'
 import InsureLPImg from '../assets/images/desktop-preview.jpg'
 import NetflixCloneImg from '../assets/images/netflixClone.png'
 import UrlShorteningImg from '../assets/images/url_shortening.png'
-import ElPanamericanoImg from '../assets/images/el panamericano.jpg'
+import ElPanamericanoImg from '../assets/images/elPanamericano.jpg'
+import EcomerceImg from '../assets/images/ecomerce.png'
 const projectsInfo = [
         {
             id :0,
@@ -14,7 +15,7 @@ const projectsInfo = [
         {
             id:1,
             title: 'E-commerce',
-            image: '',
+            image: EcomerceImg,
             description: "",
             liveWebsite: 'https://marioenpi1012.github.io/Ecomerce-with-react-redux',
             code : 'https://github.com/marioenpi1012/Ecomerce-with-react-redux'

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +9,9 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Syne", sans-serif;
   background-color: #fff;
   box-sizing: border-box;
-}
-
-.App {
   overflow-x: hidden;
 }
 

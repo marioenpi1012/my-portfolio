@@ -58,7 +58,7 @@
 }
 .Projects .container .projects .project {
   position: relative;
-  background-color: black;
+  background-color: #7f5c5c;
   z-index: 10;
   background-repeat: no-repeat;
   background-size: cover;
@@ -84,6 +84,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 8rem;
   height: 8rem;
   -webkit-border-radius: 100vw;

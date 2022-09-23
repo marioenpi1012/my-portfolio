@@ -5,8 +5,10 @@ import {motion} from 'framer-motion'
 const Project = ({project}) => {
     const [mouse, setMouse] = useState({x:0,y:0,active:false})
     const viewCursor = (e) =>{
-        const x = e.clientX * 100 / window.innerWidth
-        const y = e.clientY * 100 / window.innerHeight
+        const x = e.clientX * 50 / window.innerWidth
+        // const x = e.pageX * 50 / window.innerHeight
+        // const y = e.pageY * 30 / window.innerWidth
+        const y = e.clientY * 30 / window.innerHeight
         setMouse({x:x,y:y,active:true})
     }
     const variants = {
