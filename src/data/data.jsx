@@ -2,7 +2,7 @@ import todoImg from '../assets/images/desktop-design-dark.jpg'
 import InsureLPImg from '../assets/images/desktop-preview.jpg'
 import NetflixCloneImg from '../assets/images/netflixClone.png'
 import UrlShorteningImg from '../assets/images/url_shortening.png'
-import ElPanamericanoImg from '../assets/images/elPanamericano.jpg'
+import ElPanamericanoImg from '../assets/images/el_panamericano.png'
 import EcomerceImg from '../assets/images/ecomerce.png'
 const projectsInfo = [
         {
