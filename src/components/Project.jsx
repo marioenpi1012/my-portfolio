@@ -14,7 +14,6 @@ const Project = ({project}) => {
         const y = e.clientY
         setMouse({x:x,y:y,active:true})
         const magnet = magnetCursor(currentElement, mouse)
-        console.log({magnet})
         setMagnetCursorPosition({
             x:magnet.x.current,
             y:magnet.y.current

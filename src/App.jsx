@@ -18,7 +18,7 @@ function App() {
   const [show,setShow] = useState(false)
   const [lastYPos, setLastYPos] = useState(0)
   useEffect(()=>{
-    setLoading(false)
+    setLoading(true)
     setTimeout(()=>{
       setLoading(false)
     },8000)
