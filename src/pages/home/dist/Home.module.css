@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@100;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@100;700&display=swap");
 .Home {
   min-height: 32px;
   margin-bottom: 15rem;
@@ -15,6 +19,7 @@
   flex-direction: column;
 }
 .Home .introContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,10 +30,19 @@
   height: 100%;
   width: 100%;
 }
-.Home .introContainer .introduction p {
-  font-size: 4rem;
+.Home .introContainer .introduction {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 8vw;
+  line-height: 100%;
   text-align: center;
   color: black;
+}
+@media screen and (max-width: 1200px) {
+  .Home .introContainer .introduction {
+    font-size: 5rem;
+  }
 }
 .Home .scrollDown {
   position: absolute;
@@ -91,8 +105,11 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .Home .introContainer .introduction p {
-    font-size: 1.5rem;
+  .Home .introContainer .image img {
+    width: 50vw;
+  }
+  .Home .introContainer .introduction {
+    font-size: 3.5rem;
   }
   .Home .scrollDown {
     bottom: 15%;

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
 import styles from '../../styles/Pagination.module.scss';
 const Pagination = ({number, title,left}) =>{
     const variants ={
@@ -25,15 +24,19 @@ const Pagination = ({number, title,left}) =>{
     return(
         <motion.div 
             className={styles.Pagination}
-            variants={left ? leftVariants : variants}
             initial='hidden'
             whileInView='animate'
-            transition={{duration:1}}
-            viewport={{once:false, amount:0.5}}
+            viewport={{once:false, amount:0.8}}
             style={left &&{position:'sticky',top:0}}
             >
-            <div className={styles.pagination}>{number}</div>
-            <div className={styles.title}>{title}</div>
+                <motion.div 
+                    className={styles.container}
+                    variants={left ? leftVariants : variants}
+                    transition={{duration:1}}
+                    >
+                    <div className={styles.pagination}>{number}</div>
+                    <div className={styles.title}>{title}</div>
+                </motion.div>
         </motion.div>
     )
 }

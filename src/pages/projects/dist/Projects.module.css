@@ -53,8 +53,8 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  margin-top: 3rem;
-  gap: 3rem;
+  margin-top: 4rem;
+  gap: 5rem;
 }
 .Projects .container .projects .project {
   position: relative;
@@ -63,9 +63,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  height: 70vh;
+  height: 90vh;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,7 +159,8 @@
 
 @media screen and (max-width: 1200px) {
   .Projects .container .projects .project {
-    height: 50vh;
+    height: 60vh;
+    width: 100%;
   }
   .Projects .container .projects .project .infoContainer .info .description {
     width: 70%;
@@ -174,9 +174,14 @@
 @media screen and (max-width: 768px) {
   .Projects .container {
     padding-top: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   .Projects .container .paginationContainer .title {
     font-size: 10rem;
+  }
+  .Projects .container .projects .project {
+    height: 50vh;
   }
   .Projects .container .projects .project .view {
     width: 5rem;

@@ -1,25 +1,11 @@
-import { motion } from 'framer-motion';
 import {FaJs,FaHtml5,FaCss3,FaGitSquare,FaGithubSquare, FaReact,FaSass} from 'react-icons/fa';
 import styles from '../../styles/Skills.module.scss';
 import Pagination from './Pagination';
 const Skills = () =>{
-    const variants = {
-        animate:{
-            x:[0, -1035],
-            transition:{
-                x:{
-                    repeat:Infinity,
-                    repeatType:'loop',
-                    duration:10,
-                    ease:'linear',
-                }
-            }
-        }
-    }
     return (
         <div className={styles.Skills}>
             <Pagination number='02' title='skills' />
-            <motion.div 
+            <div 
                 className={styles.container}
                 >
                 <div className={styles.skill}>
@@ -64,7 +50,7 @@ const Skills = () =>{
                 <div className={styles.skill}>
                     <FaSass />
                 </div>
-            </motion.div>
+            </div>
         </div>
     )
 }

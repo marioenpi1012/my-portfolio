@@ -6,6 +6,9 @@
     height:100%;
     .container{
         @include Container;
+        .contactQuote{
+            padding-top:0;
+        }
         .subtitle{
             display: flex;
             justify-content: flex-end;

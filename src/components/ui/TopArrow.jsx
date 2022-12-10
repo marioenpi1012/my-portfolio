@@ -2,6 +2,9 @@ import React from 'react'
 import {motion} from 'framer-motion';
 import {FaCaretUp} from 'react-icons/fa'
 import styles from '../../styles/TopArrow.module.scss'
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(ScrollToPlugin)
 const TopArrow = ({show}) => {
     const topArrowVariants ={
         initial:{
@@ -20,13 +23,16 @@ const TopArrow = ({show}) => {
             }
         }
     }
+    const handleClick = () =>{
+        gsap.to(window, {duration:1, scrollTo:{y:0}})
+    }
     return (
         <motion.div  
             variants={topArrowVariants}
             initial='initial'
             animate={show ? 'show': 'initial'}
             className={styles.topArrow}
-            onClick={()=>window.scrollTo({top:0})}
+            onClick={handleClick}
             transition={{duration:1}}
             >
             <FaCaretUp />

@@ -1,5 +1,4 @@
 @import '../../styles/Colors.module.scss';
-
 .Home{
     @include Section;
     position: relative;
@@ -12,6 +11,7 @@
     align-items: center;
     flex-direction:column;
     .introContainer{
+        position:relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -21,10 +21,16 @@
             height:100%;
             width: 100%;
         }
-        .introduction p{
-            font-size: 4rem;
+        .introduction {
+            @include Bai;
+            text-transform: uppercase;
+            font-size: 8vw;
+            line-height: 100%;
             text-align: center;
             color: $font-color;
+            @media screen and (max-width:1200px){
+                font-size: 5rem;
+            }
         }
     }
     .scrollDown{
@@ -85,8 +91,13 @@
 }
 @media screen and (max-width:600px){
     .Home {
-        .introContainer .introduction p{
-            font-size: 1.5rem;
+        .introContainer {
+            .image img{
+                width: 50vw;
+            }
+            .introduction {
+                font-size: 3.5rem;
+            }
         }
         .scrollDown{
             bottom:15%;

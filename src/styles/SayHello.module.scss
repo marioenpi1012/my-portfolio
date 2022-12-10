@@ -8,6 +8,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // @include Bai;
+    // @include Syncopate;
+    
     .container{
         @include Container;
         width: 100%;

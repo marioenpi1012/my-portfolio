@@ -1,15 +1,25 @@
-import React,{useState} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 import {FaGithub} from 'react-icons/fa';
 import styles from '../pages/projects/Projects.module.scss'
 import {motion} from 'framer-motion'
+import magnetCursor from '../hooks/magnetCursor';
 const Project = ({project}) => {
     const [mouse, setMouse] = useState({x:0,y:0,active:false})
+    const currentElement = useRef(null)
+    const [magnetCursorPosition, setMagnetCursorPosition] = useState({x:0, y:0})
+    
+
     const viewCursor = (e) =>{
-        const x = e.clientX * 50 / window.innerWidth
-        // const x = e.pageX * 50 / window.innerHeight
-        // const y = e.pageY * 30 / window.innerWidth
-        const y = e.clientY * 30 / window.innerHeight
+        const x = e.clientX
+        const y = e.clientY
         setMouse({x:x,y:y,active:true})
+        const magnet = magnetCursor(currentElement, mouse)
+        console.log({magnet})
+        setMagnetCursorPosition({
+            x:magnet.x.current,
+            y:magnet.y.current
+        })
+        
     }
     const variants = {
         hidden:{
@@ -42,6 +52,7 @@ const Project = ({project}) => {
                 onMouseLeave={()=>setMouse({active:false})}
                 initial='hidden'
                 whileHover='animate'
+                ref={currentElement}
                 >
                 <div
                     className={styles.pageOverlay}
@@ -50,7 +61,7 @@ const Project = ({project}) => {
                     className={styles.view}
                     variants={variants}
                     initial='hidden'
-                    animate={ mouse.active ? {transform:`translate3d(${mouse.x}px, ${mouse.y}px,0px) scale3d(1,1,1)`,opacity:1} : {opacity:0}}
+                    animate={ mouse.active ? {transform:`translate3d(${magnetCursorPosition.x}px, ${magnetCursorPosition.y}px,0px) scale3d(1,1,1)`,opacity:1} : {opacity:0}}
                     exit='exit'
                     >
                     <div>view</div>
