@@ -3,31 +3,94 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: rgb(var(--foreground-rgb));
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+.menu {
+	--_menu-width: 50px;
+	--_menu-height: 3px;
+	--_bg: black;
+	--_transition: transform 350ms ease-in-out, background 1s ease-in-out;
+	--_transform-origin: center;
+	--_border-radius: 4px;
+	background-color: var(--_bg);
+	position: absolute;
+	width: var(--_menu-width);
+	height: var(--_menu-height);
+	top: 50%;
+	bottom: 50%;
+	left: 0;
+	left: 0;
+	transition: var(--_transition);
+	transform: rotate(0);
+	transform-origin: var(--_transform-origin);
+	border-radius: var(--_border-radius);
+}
+
+.menu::after,
+.menu::before {
+	content: "";
+	position: absolute;
+	width: calc(var(--_menu-width) / 2);
+	height: var(--_menu-height);
+	background-color: var(--_bg);
+	transition: var(--_transition);
+	transform-origin: var(--_transform-origin);
+	border-radius: var(--_border-radius);
+}
+.menu--opened {
+	--_bg: white;
+	background-color: var(--_bg);
+	&::after,
+	&::before {
+		background-color: var(--_bg);
+	}
+}
+.menu::after {
+	right: 0;
+	transform: translateY(-10px) rotate(0);
+}
+.menu::before {
+	left: 0;
+	transform: translateY(10px) rotate(0);
+}
+
+.navOpened {
+	-webkit-clip-path: circle(125vh at 90% -10%) !important;
+	clip-path: circle(125vh at 90% -10%) !important;
+}
+.navClosed {
+	-webkit-clip-path: circle(100px at 105% -10%);
+	clip-path: circle(100px at 105% -10%);
+}
+
+button[data-menu-opened="true"].navOpened .menu {
+	transform: rotate(-45deg) !important;
+
+	&::before {
+		transform: translate(50%, -400%) rotate(-90deg) !important;
+	}
+	&::after {
+		transform: translate(-50%, 400%) rotate(-90deg) !important;
+	}
 }
