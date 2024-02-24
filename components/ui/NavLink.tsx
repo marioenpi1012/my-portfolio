@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { ReactNode } from "react";
-
+import Link from "next/link";
+import { motion } from "framer-motion";
 type NavLinkProps = {
 	href: string;
 	children: ReactNode;
@@ -8,17 +8,35 @@ type NavLinkProps = {
 };
 
 export default function NavLink({ href, children, subLabel }: NavLinkProps) {
+	const variants = {
+		hidden: {
+			opacity: 0,
+			y: "10px",
+		},
+		animate: {
+			opacity: 1,
+			y: 0,
+			transition: { duration: 0.7 },
+		},
+	};
 	return (
-		<div className="flex flex-col items-center content-center">
+		<motion.div
+			className="flex flex-col items-center content-center"
+			initial="hidden"
+			whileHover="animate"
+		>
 			<Link
 				href={href}
 				className="no-underline text-[4.0625rem] uppercase text-center text-white "
 			>
 				{children}
 			</Link>
-			<span className="opacity-100 translate-y-0 text-white text-opacity-25 ">
+			<motion.span
+				className="link__sub-label text-white/75"
+				variants={variants}
+			>
 				{subLabel}
-			</span>
-		</div>
+			</motion.span>
+		</motion.div>
 	);
 }

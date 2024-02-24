@@ -31,6 +31,9 @@ const config: Config = {
 			},
 		},
 	},
+	future: {
+		hoverOnlyWhenSupported: true,
+	},
 	plugins: [require("@tailwindcss/typography")],
 };
 export default config;

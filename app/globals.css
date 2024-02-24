@@ -25,6 +25,12 @@ body {
 		text-wrap: balance;
 	}
 }
+@media (hover:none){
+	.link__sub-label{
+		opacity: 1 !important;
+		transform: translateY(0) !important;
+	}
+  }
 
 .menu {
 	--_menu-width: 50px;
@@ -79,9 +85,16 @@ body {
 	-webkit-clip-path: circle(125vh at 90% -10%) !important;
 	clip-path: circle(125vh at 90% -10%) !important;
 }
+@media only screen and (min-width: 768px) {
+	.navOpened{
+			-webkit-clip-path: circle(150vw at 90% -10%) !important;
+		clip-path: circle(150vw at 90% -10%) !important;
+	}
+}
+
 .navClosed {
 	-webkit-clip-path: circle(100px at 105% -10%);
-	clip-path: circle(100px at 105% -10%);
+	clip-path: circle(100px at calc(100% + 100px) -10%);
 }
 
 button[data-menu-opened="true"].navOpened .menu {

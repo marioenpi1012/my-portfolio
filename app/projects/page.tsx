@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import { allProjects, Project } from ".contentlayer/generated";
-
+import Mdx from "@/components/MdxWrapper";
+import Link from "next/link";
 export const metadata: Metadata = {
 	title: "Mario Pineda | Projects",
 	description: "Here are some projects I've worked on.",
@@ -15,15 +16,21 @@ export default function Page() {
 			<h1>Projects</h1>
 			{projects.map((project, i) => (
 				<div key={project.slug} className="text-black">
-					{project.title}
 					<div>
-						<Image
-							src={project.image}
-							alt={project.title}
-							layout="fill"
-							objectFit="cover"
-							className="w-full h-full"
-						/>
+						<Link href={project.url}>{project.title}</Link>
+						<time> · {project.time}</time>
+					</div>
+					{project.title}
+					{project.description}
+					<Image
+						src={project.image}
+						alt=""
+						layout="fill"
+						objectFit="cover"
+						className="w-full h-full"
+					/>
+					<div>
+						<Mdx code={project.body.code} />
 					</div>
 				</div>
 			))}

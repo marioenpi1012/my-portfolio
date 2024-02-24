@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import NavLink from "./ui/NavLink";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import clsx from "clsx";
 
 const links = [
@@ -31,8 +32,34 @@ const links = [
 
 export default function Navigation() {
 	const [toggle, setToggle] = useState(false);
+
+	const ulVariants = {
+		closed: {
+			transition: { staggerChildren: 0.05, staggerDirection: -1 },
+		},
+		opened: {
+			transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+		},
+	};
+
+	const liVariants = {
+		closed: {
+			y: 50,
+			opacity: 0,
+			transition: {
+				y: { stiffness: 1000 },
+			},
+		},
+		opened: {
+			y: 0,
+			opacity: 1,
+			transition: {
+				y: { stiffness: 1000, velocity: -100 },
+			},
+		},
+	};
 	return (
-		<header className="relative px-4 pt-5 mx-auto mx-w-[700px]">
+		<header className="relative px-4 pt-5 mx-auto max-w-screen-xl ">
 			<nav
 				className={clsx(
 					{ "navOpened ": toggle },
@@ -57,18 +84,24 @@ export default function Navigation() {
 				>
 					<div className={clsx({ "menu--opened": toggle }, "menu")}></div>
 				</button>
-				<ul
+				<motion.ul
 					className={clsx(
 						{ navOpened: toggle },
 						"navClosed -z-10 fixed flex flex-col bg-black text-white top-0 left-0 justify-center items-center w-screen min-h-screen h-full overflow-hidden transition-all duration-1000 ease-out "
 					)}
+					variants={ulVariants}
+					animate={toggle ? "opened" : "closed"}
 				>
 					{links.map(({ href, label, subLabel }) => (
-						<li key={href}>
+						<motion.li
+							key={href}
+							onClick={() => setToggle(!toggle)}
+							variants={liVariants}
+						>
 							<NavLink href={href} children={label} subLabel={subLabel} />
-						</li>
+						</motion.li>
 					))}
-				</ul>
+				</motion.ul>
 			</nav>
 		</header>
 	);

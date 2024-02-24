@@ -19,7 +19,7 @@ const projectComputedFields: ComputedFields = {
 
 export const Project = defineDocumentType(() => ({
 	name: "Project",
-	filePathPattern: `/projects/**/*.mdx`,
+	filePathPattern: `project/**/*.mdx`,
 	contentType: "mdx",
 	fields: {
 		title: { type: "string", required: true },
