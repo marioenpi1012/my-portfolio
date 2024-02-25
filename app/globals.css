@@ -2,22 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
-}
+@import "@radix-ui/colors/gray.css";
+@import "@radix-ui/colors/gray-dark.css";
+@import "@radix-ui/colors/gray-alpha.css";
+@import "@radix-ui/colors/gray-dark-alpha.css";
 
-@media (prefers-color-scheme: dark) {
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/blue-dark.css";
+@import "@radix-ui/colors/blue-alpha.css";
+@import "@radix-ui/colors/blue-dark-alpha.css";
+
+@layer base {
 	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
+		--bg-color: var(--gray-1);
 	}
 }
+.light .prose {
+	--tw-prose-headings: var(--gray-12);
+	--tw-prose-body: var(--gray-12);
+	--tw-prose-bold: var(--gray-12);
+	--tw-prose-links: var(--blue-11);
+	--tw-prose-code: var(--gray-12);
+	--tw-prose-quotes: var(--gray-12);
+}
 
+.dark .prose {
+	--tw-prose-headings: var(--gray-12);
+	--tw-prose-body: var(--gray-11);
+	--tw-prose-bold: var(--gray-11);
+	--tw-prose-links: var(--blue-11);
+	--tw-prose-code: var(--gray-11);
+	--tw-prose-quotes: var(--gray-11);
+}
 body {
 	color: rgb(var(--foreground-rgb));
+	background-color: var(--bg-color);
 }
 
 @layer utilities {
@@ -25,17 +44,17 @@ body {
 		text-wrap: balance;
 	}
 }
-@media (hover:none){
-	.link__sub-label{
+@media (hover: none) {
+	.link__sub-label {
 		opacity: 1 !important;
 		transform: translateY(0) !important;
 	}
-  }
+}
 
 .menu {
 	--_menu-width: 50px;
 	--_menu-height: 3px;
-	--_bg: black;
+	--_bg: var(--gray-12);
 	--_transition: transform 350ms ease-in-out, background 1s ease-in-out;
 	--_transform-origin: center;
 	--_border-radius: 4px;
@@ -86,9 +105,9 @@ body {
 	clip-path: circle(125vh at 90% -10%) !important;
 }
 @media only screen and (min-width: 768px) {
-	.navOpened{
-			-webkit-clip-path: circle(150vw at 90% -10%) !important;
-		clip-path: circle(150vw at 90% -10%) !important;
+	.navOpened {
+		-webkit-clip-path: circle(200vw at 90% -10%) !important;
+		clip-path: circle(200vw at 90% -10%) !important;
 	}
 }
 
@@ -97,7 +116,7 @@ body {
 	clip-path: circle(100px at calc(100% + 100px) -10%);
 }
 
-button[data-menu-opened="true"].navOpened .menu {
+button[aria-expanded="true"].navOpened .menu {
 	transform: rotate(-45deg) !important;
 
 	&::before {

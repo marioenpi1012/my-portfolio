@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import Navigation from "@/components/Navigation";
 
-const inter = Inter({ subsets: ["latin"] });
+const monstserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Mario Pineda",
@@ -18,9 +18,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={clsx(inter.className, "bg-white")}>
+			<body className={clsx(monstserrat.className, "antialiased bg-white")}>
 				<Navigation />
-				<main className="px-4 mx-auto max-w-[700px]">{children}</main>
+				<main className="py-10 px-4 md:py-20 md:px-5 mx-auto max-w-[1160px]">
+					{children}
+				</main>
 			</body>
 		</html>
 	);

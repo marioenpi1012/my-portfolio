@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
-
+import Image from "next/image";
 import NavLink from "./ui/NavLink";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+
+import Logo from "@/public/logo.png";
 
 const links = [
 	{ label: "Home", href: "/", subLabel: "Not place like home" },
@@ -32,7 +34,6 @@ const links = [
 
 export default function Navigation() {
 	const [toggle, setToggle] = useState(false);
-
 	const ulVariants = {
 		closed: {
 			transition: { staggerChildren: 0.05, staggerDirection: -1 },
@@ -59,35 +60,37 @@ export default function Navigation() {
 		},
 	};
 	return (
-		<header className="relative px-4 pt-5 mx-auto max-w-screen-xl ">
+		<header className="fixed inset-0 h-[50px] bg-inherit px-4 mt-5 mx-auto max-w-[1160px] md:py-5 ">
 			<nav
 				className={clsx(
 					{ "navOpened ": toggle },
 					"relative flex justify-between z-20"
 				)}
 			>
-				<Link
-					href="/"
-					className={clsx(
-						{ "text-white": toggle },
-						"text-black no-underline uppercase transition-all duration-1000 ease-in-out"
-					)}
-				>
-					Mario Pineda
+				<Link href="/" className="w-12 h-full inline-block">
+					<Image
+						src={Logo}
+						className="max-w-full inline-block align-middle"
+						alt="logo"
+					/>
 				</Link>
 				<button
-					data-menu-opened={toggle}
+					aria-expanded={toggle}
+					aria-controls="main-navigation"
 					className={clsx(
-						"navOpened flex h-[50px] w-[50px] relative cursor-pointer text-white z-20 "
+						"navOpened flex h-[50px] w-[50px] relative cursor-pointer text-primary z-20 "
 					)}
 					onClick={() => setToggle(!toggle)}
 				>
 					<div className={clsx({ "menu--opened": toggle }, "menu")}></div>
+					<span className="sr-only">Menu</span>
 				</button>
+
 				<motion.ul
+					id="main-navigation"
 					className={clsx(
 						{ navOpened: toggle },
-						"navClosed -z-10 fixed flex flex-col bg-black text-white top-0 left-0 justify-center items-center w-screen min-h-screen h-full overflow-hidden transition-all duration-1000 ease-out "
+						"navClosed  -z-10 fixed flex flex-col bg-black text-white top-0 left-0 justify-center items-center w-screen min-h-screen h-full overflow-hidden transition-all duration-1000 ease-out "
 					)}
 					variants={ulVariants}
 					animate={toggle ? "opened" : "closed"}

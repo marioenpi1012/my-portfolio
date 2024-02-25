@@ -22,13 +22,7 @@ export default function Page() {
 					</div>
 					{project.title}
 					{project.description}
-					<Image
-						src={project.image}
-						alt=""
-						layout="fill"
-						objectFit="cover"
-						className="w-full h-full"
-					/>
+
 					<div>
 						<Mdx code={project.body.code} />
 					</div>

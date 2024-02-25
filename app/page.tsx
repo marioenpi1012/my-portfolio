@@ -1,25 +1,30 @@
 import Image from "next/image";
-import Avatar from "@/public/avatar.png";
+import Avatar from "@/public/avatar.jpg";
 
 export default function Home() {
 	return (
-		<div className="">
-			<div className="flex flex-col min-h-[80vh]  items-center justify-center">
-				<Image
-					src={Avatar}
-					alt="avatar"
-					className="w-[50vw] max-w-80 max-h-80"
-				/>
-				<h1 className="text-black font-bold text-6xl text-center uppercase">
-					Front End <br />
-					Developer
-				</h1>
-				<div className="absolute  bottom-[15%] w-[34px] h-[55px] cursor-pointer md:bottom-[10%] lg:bottom-[15%] ">
-					<div className="w-[3px] h-[35px] py-[10px] px-[15px] border border-black opacity-75 box-content rounded-[25px]">
-						<div className="w-[3px] h-[10px] rounded-[25%] bg-black animate-scroll"></div>
-					</div>
+		<section className="h-screen flex  ">
+			<div className="w-full  ml-auto mr-auto flex">
+				<div className="grid grid-rows-[auto_auto_auto] grid-cols-1 text-primary uppercase text-sm md:grid-cols-3 md:gap-4 xl:text-[170px]">
+					<h1 className="text-primary uppercase font-bold row-span-2  self-center text-5xl leading-[83%] md:col-span-3 md:text-[110px] ">
+						<div>Mario</div>
+						<div>Pineda</div>
+					</h1>
+					<p className=" max-w-[360px] row-span-1 md:text-base">
+						Creating user-friendly designs, taking digital awesomeness to new
+						heights. Experience the perfect blend of creativity and
+						functionality in every pixel -It's like digital magic!
+					</p>
+					<p className="row-span-1 justify-self-start md:text-base">
+						Front End Developer
+					</p>
+					<Image
+						src={Avatar}
+						alt="avatar"
+						className="w-full max-w-[65%]  aspect-square  rounded-full "
+					/>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
