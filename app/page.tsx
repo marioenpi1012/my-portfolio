@@ -9,6 +9,7 @@ import ProjectList from "./projects/components/ProjectList";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import Magnetic from "@/components/Magnetic";
 
 export default function Home() {
 	const projects = allProjects.filter((_, i) => i < 3); // 3 most recent.
@@ -145,16 +146,18 @@ export default function Home() {
 						applications leaving a lasting impact.
 					</p>
 					<ProjectList projects={projects} />
-					<Link
-						href="/projects"
-						className="relative inline-flex justify-center items-center  no-underline text-sm px-12 py-4 border rounded-full"
-					>
-						More work
-						<span className="absolute text-accent text-[0.675rem] bottom-1/2 left-3/4">
-							{/* Subtract the 3 recent projects */}
-							{allProjects.length - 3}
-						</span>
-					</Link>
+					<Magnetic>
+						<Link
+							href="/projects"
+							className="relative inline-flex justify-center items-center  no-underline text-sm px-12 py-4 border rounded-full"
+						>
+							More work
+							<span className="absolute text-accent text-[0.675rem] bottom-1/2 left-3/4">
+								{/* Subtract the 3 recent projects */}
+								{allProjects.length - 3}
+							</span>
+						</Link>
+					</Magnetic>
 				</div>
 			</section>
 		</>
