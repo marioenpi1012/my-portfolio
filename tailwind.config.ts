@@ -11,11 +11,12 @@ const config: Config = {
 		extend: {
 			textColor: {
 				primary: "var(--gray-12)",
-				secondary: "var(--gray-11)",
+				secondary: "var(--gray-1)",
+				accent: "var(--gray-11)",
 			},
 			backgroundColor: {
 				primary: "var(--gray-1)",
-				secondary: "var(--gray-3)",
+				secondary: "var(--gray-12)",
 			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -60,11 +60,11 @@ export default function Navigation() {
 		},
 	};
 	return (
-		<header className="fixed inset-0 h-[50px] bg-inherit px-4 mt-5 mx-auto max-w-[1160px] md:py-5 ">
+		<header className="fixed top-0 inset-x-0 h-auto bg-inherit pt-5 px-4 mx-auto max-w-[1160px] z-50 md:pb-5">
 			<nav
 				className={clsx(
 					{ "navOpened ": toggle },
-					"relative flex justify-between z-20"
+					"relative flex justify-between z-20 h-[50px] "
 				)}
 			>
 				<Link href="/" className="w-12 h-full inline-block">
