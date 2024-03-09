@@ -3,6 +3,7 @@ import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const monstserrat = Montserrat({ subsets: ["latin"] });
 
@@ -18,11 +19,17 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={clsx(monstserrat.className, "antialiased bg-white")}>
+			<body
+				className={clsx(
+					monstserrat.className,
+					"antialiased bg-white overflow-auto h-full"
+				)}
+			>
 				<Navigation />
 				<main className="py-10 px-4 md:py-20 md:px-5 mx-auto max-w-[1160px]">
 					{children}
 				</main>
+				<Footer />
 			</body>
 		</html>
 	);

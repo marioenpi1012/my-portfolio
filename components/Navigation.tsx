@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 
 import Logo from "@/public/logo.png";
+import Magnetic from "@/components/Magnetic";
 
 const links = [
 	{ label: "Home", href: "/", subLabel: "Not place like home" },
@@ -74,17 +75,19 @@ export default function Navigation() {
 						alt="logo"
 					/>
 				</Link>
-				<button
-					aria-expanded={toggle}
-					aria-controls="main-navigation"
-					className={clsx(
-						"navOpened flex h-[50px] w-[50px] relative cursor-pointer text-primary z-20 "
-					)}
-					onClick={() => setToggle(!toggle)}
-				>
-					<div className={clsx({ "menu--opened": toggle }, "menu")}></div>
-					<span className="sr-only">Menu</span>
-				</button>
+				<Magnetic>
+					<button
+						aria-expanded={toggle}
+						aria-controls="main-navigation"
+						className={clsx(
+							"navOpened flex h-[50px] w-[50px] relative cursor-pointer text-primary z-20 "
+						)}
+						onClick={() => setToggle(!toggle)}
+					>
+						<div className={clsx({ "menu--opened": toggle }, "menu")}></div>
+						<span className="sr-only">Menu</span>
+					</button>
+				</Magnetic>
 
 				<motion.ul
 					id="main-navigation"

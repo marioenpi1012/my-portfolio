@@ -53,7 +53,7 @@ export default function Modal({ modal, projects }: ModalProps) {
 	return (
 		<motion.div
 			ref={modalContainer}
-			className="h-[350px] w-[400px] bg-secondary absolute overflow-hidden flex items-center justify-center pointer-events-none "
+			className="h-[350px] w-[400px] bg-secondary absolute overflow-hidden flex items-center justify-center pointer-events-none z-50 "
 			variants={scaleAnimation}
 			initial="initial"
 			animate={active ? "enter" : "exit"}

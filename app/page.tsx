@@ -154,7 +154,7 @@ export default function Home() {
 							More work
 							<span className="absolute text-accent text-[0.675rem] bottom-1/2 left-3/4">
 								{/* Subtract the 3 recent projects */}
-								{allProjects.length - 3}
+								{allProjects.length - 3 > 0 ? `+${allProjects.length - 3}` : ""}
 							</span>
 						</Link>
 					</Magnetic>
