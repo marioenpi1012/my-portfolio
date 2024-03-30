@@ -26,7 +26,7 @@ export default function Footer() {
 				</div>
 				<Link
 					href="mailto:mariopineda179@gmail.com"
-					className="text-xl grid text-accent hover:text-primary lg:col-start-4 lg:text-4xl "
+					className="text-xl grid text-muted-foreground hover:text-primary lg:col-start-4 lg:text-4xl  "
 				>
 					mariopineda179@gmail.com
 				</Link>

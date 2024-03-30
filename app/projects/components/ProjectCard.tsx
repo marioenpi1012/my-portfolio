@@ -3,16 +3,27 @@
 import type { Project } from "contentlayer/generated";
 import Image from "next/image";
 import Link from "next/link";
+import { Dispatch, SetStateAction } from "react";
 
 import { HiArrowUpRight } from "react-icons/hi2";
 
 type ProjectProps = {
 	project: Project;
+	setModal?: Dispatch<
+		SetStateAction<{
+			active: boolean;
+			index: number;
+		}>
+	>;
+	index?: number;
 };
 
-export default function ProjectCard({ project }: ProjectProps) {
+export default function ProjectCard({ project, ...props }: ProjectProps) {
 	return (
-		<li className="group overflow-hidden row-span-1 col-span-1">
+		<li
+			className="group overflow-hidden row-span-1 col-span-1 list-none"
+			{...props}
+		>
 			<Link
 				href={`/projects/${project.slug}`}
 				className="relative block no-underline w-full h-full pt-[40%] "

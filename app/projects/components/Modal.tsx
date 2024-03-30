@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 import gsap from "gsap";
+import Button from "@/components/ui/Button";
 
 const scaleAnimation = {
 	initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -53,7 +54,7 @@ export default function Modal({ modal, projects }: ModalProps) {
 	return (
 		<motion.div
 			ref={modalContainer}
-			className="h-[350px] w-[400px] bg-secondary absolute overflow-hidden flex items-center justify-center pointer-events-none z-50 "
+			className="h-[350px] w-[400px] bg-secondary absolute overflow-hidden flex items-center justify-center pointer-events-none z-50"
 			variants={scaleAnimation}
 			initial="initial"
 			animate={active ? "enter" : "exit"}
@@ -78,9 +79,6 @@ export default function Modal({ modal, projects }: ModalProps) {
 					</div>
 				))}
 			</div>
-			<button className="w-16 h-16 bg-secondary text-secondary rounded-full z-10">
-				View
-			</button>
 		</motion.div>
 	);
 }

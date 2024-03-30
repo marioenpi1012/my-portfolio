@@ -8,6 +8,8 @@ import clsx from "clsx";
 
 import Logo from "@/public/logo.png";
 import Magnetic from "@/components/Magnetic";
+import Button from "@/components/ui/Button";
+import { cn } from "@/lib/utils";
 
 const links = [
 	{ label: "Home", href: "/", subLabel: "Not place like home" },
@@ -75,22 +77,23 @@ export default function Navigation() {
 						alt="logo"
 					/>
 				</Link>
-				<Magnetic>
-					<button
-						aria-expanded={toggle}
-						aria-controls="main-navigation"
-						className={clsx(
-							"navOpened flex h-[50px] w-[50px] relative cursor-pointer text-primary z-20 "
-						)}
-						onClick={() => setToggle(!toggle)}
-					>
-						<div className={clsx({ "menu--opened": toggle }, "menu")}></div>
-						<span className="sr-only">Menu</span>
-					</button>
-				</Magnetic>
-
+				<Button
+					variant="ghost"
+					data-cursor-scale // DO NOT REMOVE - needed for cursor animation
+					className="navOpened relative flex text-primary h-[50px] w-[50px] px-0 py-0 rounded-none z-20 hover:bg-inherit "
+					onClick={() => setToggle(!toggle)}
+					aria-label="Toggle Navigation"
+					aria-expanded={toggle}
+					aria-controls="main-navigation"
+				>
+					<div className={cn("menu", { "menu--opened": toggle })}></div>
+					<span className="sr-only">Menu</span>
+				</Button>
 				<motion.ul
 					id="main-navigation"
+					aria-label="Main Navigation"
+					aria-expanded={toggle}
+					aria-hidden={!toggle}
 					className={clsx(
 						{ navOpened: toggle },
 						"navClosed  -z-10 fixed flex flex-col bg-black text-white top-0 left-0 justify-center items-center w-screen min-h-screen h-full overflow-hidden transition-all duration-1000 ease-out "

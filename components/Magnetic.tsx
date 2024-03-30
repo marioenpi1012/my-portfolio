@@ -1,19 +1,15 @@
 import React, { ReactElement, useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 type MagneticProps = {
 	children: ReactElement;
 };
 
 export default function Magnetic({ children }: MagneticProps) {
-	const magneticRef = useRef<HTMLElement>(null);
+	const magneticRef = useRef<HTMLButtonElement | null>(null);
 
-	useEffect(() => {
-		const handleMouseOver = () => {
-			// Your logic for mouseover event here
-			console.log("Mouse over event");
-		};
-
+	useGSAP(() => {
 		const xTo = gsap.quickTo(magneticRef.current, "x", {
 			duration: 1,
 			ease: "elastic.out(1, .3)",
@@ -22,8 +18,6 @@ export default function Magnetic({ children }: MagneticProps) {
 			duration: 1,
 			ease: "elastic.out(1, 0.3)",
 		});
-
-		// Adding event listener
 		if (magneticRef.current) {
 			magneticRef.current.addEventListener("mousemove", (e) => {
 				const { clientX, clientY } = e;
@@ -34,24 +28,15 @@ export default function Magnetic({ children }: MagneticProps) {
 					const { width, height, left, top } = boundingRect;
 					const x = clientX - (left + width / 2);
 					const y = clientY - (top + height / 2);
-
-					// Reduce by 0.35
-					xTo(x * 0.35);
-					yTo(y * 0.35);
+					xTo(x);
+					yTo(y);
 				}
 			});
-			magneticRef.current.addEventListener("mouseleave", (e) => {
+			magneticRef.current.addEventListener("mouseleave", () => {
 				xTo(0);
 				yTo(0);
 			});
 		}
-
-		// Cleanup function to remove the event listener when component unmounts
-		return () => {
-			if (magneticRef.current) {
-				magneticRef.current.removeEventListener("mouseover", handleMouseOver);
-			}
-		};
 	}, []);
 
 	return React.cloneElement(children, { ref: magneticRef });

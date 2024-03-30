@@ -5,9 +5,18 @@ import Project from "./Project";
 import ProjectCard from "./ProjectCard";
 import Modal from "./Modal";
 import { useState } from "react";
+
+import { motion } from "framer-motion";
+import clsx from "clsx";
+
 type ProjectListProps = {
 	projects: ProjectType[];
 	display?: "list" | "card";
+};
+
+const displays = {
+	list: "animated-list",
+	card: "gap-4 md:grid-cols-2",
 };
 
 export default function ProjectList({
@@ -16,7 +25,13 @@ export default function ProjectList({
 }: ProjectListProps) {
 	const [modal, setModal] = useState({ active: false, index: 0 });
 	return (
-		<ul className="animated-list grid grid-cols-1 grid-rows-[auto_auto] w-full h-full  m:grid-cols-2">
+		<motion.ul
+			className={clsx(
+				"grid grid-cols-1 grid-rows-[auto_auto] w-full h-full",
+				displays[display]
+			)}
+			data-show-cursor-text
+		>
 			{projects.map((project, index) =>
 				display === "list" ? (
 					<Project
@@ -30,6 +45,6 @@ export default function ProjectList({
 				)
 			)}
 			<Modal modal={modal} projects={projects} />
-		</ul>
+		</motion.ul>
 	);
 }

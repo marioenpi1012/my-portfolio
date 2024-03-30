@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Avatar from "@/public/avatar.jpg";
+import avatar from "@/public/avatar.jpg";
 import Pagination from "@/components/Pagination";
 
 import { allProjects, Project } from ".contentlayer/generated";
@@ -8,9 +8,10 @@ import ProjectList from "./projects/components/ProjectList";
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import Link from "next/link";
 import Magnetic from "@/components/Magnetic";
-
+import Button from "@/components/ui/Button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+import Link from "@/components/ui/Link";
 export default function Home() {
 	const projects = allProjects.filter((_, i) => i < 3); // 3 most recent.
 
@@ -90,11 +91,10 @@ export default function Home() {
 							Front End Developer
 						</motion.p>
 						<motion.div variants={fadeInAnimationVariants}>
-							<Image
-								src={Avatar}
-								alt="avatar"
-								className="w aspect-square w-full  max-w-[65%] rounded-full  "
-							/>
+							<Avatar className="w-full h-auto">
+								<AvatarImage src="/avatar.jpg" alt="avatar" />
+								<AvatarFallback>MP</AvatarFallback>
+							</Avatar>
 						</motion.div>
 					</motion.div>
 				</div>
@@ -140,24 +140,19 @@ export default function Home() {
 			<section>
 				<Pagination number="02" title="Work" />
 				<div className="space-y-6 md:space-y-12 flex flex-col items-center">
-					<p className="text-accent text-sm max-w-[400px]">
+					<p className="text-muted-foreground text-sm max-w-[400px]">
 						Here&apos;s a glimpse into some of the adventures where I&apos;ve
 						applied my enthusiasm for developmen crafting user-friendly
 						applications leaving a lasting impact.
 					</p>
 					<ProjectList projects={projects} />
-					<Magnetic>
-						<Link
-							href="/projects"
-							className="relative inline-flex justify-center items-center  no-underline text-sm px-12 py-4 border rounded-full"
-						>
-							More work
-							<span className="absolute text-accent text-[0.675rem] bottom-1/2 left-3/4">
-								{/* Subtract the 3 recent projects */}
-								{allProjects.length - 3 > 0 ? `+${allProjects.length - 3}` : ""}
-							</span>
-						</Link>
-					</Magnetic>
+
+					<Link href="/projects" variant="outline" size="lg" className="py-6">
+						More Work
+						<sup className="text-muted-foreground text-[0.675rem] ">
+							{allProjects.length - 3 > 0 ? `+${allProjects.length - 3}` : ""}
+						</sup>
+					</Link>
 				</div>
 			</section>
 		</>
