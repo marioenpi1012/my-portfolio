@@ -4,15 +4,27 @@
 /node_modules
 /.pnp
 .pnp.js
+<<<<<<< HEAD
+=======
+.yarn/install-state.gz
+>>>>>>> nextjs-migration
 
 # testing
 /coverage
 
+<<<<<<< HEAD
+=======
+# next.js
+/.next/
+/out/
+
+>>>>>>> nextjs-migration
 # production
 /build
 
 # misc
 .DS_Store
+<<<<<<< HEAD
 .env.local
 .env.development.local
 .env.test.local
@@ -21,3 +33,24 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+=======
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# contentlayer
+.contentlayer
+>>>>>>> nextjs-migration

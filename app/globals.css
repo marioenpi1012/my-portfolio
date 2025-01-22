@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+
+
+
+
+
+body {
+    color: var(--foreground);
+    background-color: var(--background);
+    /* font-family: mons; */
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@media (hover: none) {
+    .link__sub-label {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .project__display-info {
+        p {
+            transform: translateY(0) !important;
+        }
+
+        div {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+@media (hover: hover) {
+    .animated-list:hover li {
+        opacity: 0.5;
+    }
+
+    .animated-list:hover li:hover {
+        opacity: 1;
+        transition-duration: 0.7s;
+        transition-timing-function: ease-in-out;
+    }
+}
+
+.menu {
+    --_menu-width: 50px;
+    --_menu-height: 3px;
+    --_bg: hsl(var(--foreground));
+    --_transition: transform 350ms ease-in-out, background 1s ease-in-out;
+    --_transform-origin: center;
+    --_border-radius: 4px;
+    background-color: var(--_bg);
+    position: absolute;
+    width: var(--_menu-width);
+    height: var(--_menu-height);
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    left: 0;
+    transition: var(--_transition);
+    transform: rotate(0);
+    transform-origin: var(--_transform-origin);
+    border-radius: var(--_border-radius);
+}
+
+.menu::after,
+.menu::before {
+    content: "";
+    position: absolute;
+    width: calc(var(--_menu-width) / 2);
+    height: var(--_menu-height);
+    background-color: var(--_bg);
+    transition: var(--_transition);
+    transform-origin: var(--_transform-origin);
+    border-radius: var(--_border-radius);
+}
+
+.menu--opened {
+    --_bg: white;
+    background-color: var(--_bg);
+
+    &::after,
+    &::before {
+        background-color: var(--_bg);
+    }
+}
+
+.menu::after {
+    right: 0;
+    transform: translateY(-10px) rotate(0);
+}
+
+.menu::before {
+    left: 0;
+    transform: translateY(10px) rotate(0);
+}
+
+.navOpened {
+    -webkit-clip-path: circle(125vh at 90% -10%) !important;
+    clip-path: circle(125vh at 90% -10%) !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .navOpened {
+        -webkit-clip-path: circle(200vw at 90% -10%) !important;
+        clip-path: circle(200vw at 90% -10%) !important;
+    }
+}
+
+.navClosed {
+    -webkit-clip-path: circle(100px at 105% -10%);
+    clip-path: circle(100px at calc(100% + 100px) -10%);
+}
+
+button[aria-expanded="true"].navOpened .menu {
+    transform: rotate(-45deg) !important;
+
+    &::before {
+        transform: translate(50%, -400%) rotate(-90deg) !important;
+    }
+
+    &::after {
+        transform: translate(-50%, 400%) rotate(-90deg) !important;
+    }
+}
+
+.full-bleed {
+    box-shadow: 0 0 0 100vmax var(--gray-12);
+    clip-path: inset(0 -1000vmax);
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
