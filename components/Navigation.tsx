@@ -107,7 +107,9 @@ export default function Navigation() {
 							onClick={() => setToggle(!toggle)}
 							variants={liVariants}
 						>
-							<NavLink href={href} children={label} subLabel={subLabel} />
+							<NavLink href={href}  subLabel={subLabel} >
+								{label}
+							</NavLink>
 						</motion.li>
 					))}
 				</motion.ul>
