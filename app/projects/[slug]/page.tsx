@@ -1,6 +1,6 @@
 import React from "react";
 
-import { allProjects, Project } from "@/.contentlayer/generated";
+import { allProjects } from "@/.contentlayer/generated";
 import Image from "next/image";
 
 import MdxWrapper from "@/components/MdxWrapper";
