@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Cursor from "@/components/ui/Cursor";
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const monstserrat = Montserrat({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
 				<Cursor />
 				<main className="py-10 px-4 md:py-20 md:px-5 mx-auto max-w-[1160px]">
 					{children}
+					<SpeedInsights />
 				</main>
 				<Footer />
 			</body>
