@@ -112,7 +112,7 @@ export default function Home() {
 						variants={fadeInLeftSideAnimationVariants}
 						className="text-[2rem] uppercase leading-9 mt-5 mb-[0.625rem]"
 					>
-						It&apos;s about understanding peaple, solving problems, and creating
+						It&apos;s about understanding people, solving problems, and creating
 						meaningful connections.
 					</motion.h3>
 					<div className="text-sm space-y-5 grid gap-[1.875rem] justify-self-end row-span-1 md:text-base">
@@ -121,7 +121,7 @@ export default function Home() {
 							className=" mt-5 mb-[0.625rem] max-w-md "
 						>
 							{" "}
-							Hello, I&apos;m Mario Pineda, a passionate Fronend Developer
+							Hello, I&apos;m Mario Pineda, a passionate Frontend Developer
 							dedicating to creating digital experience that seamlessly blend
 							aesthetics with functionality.
 						</motion.p>
@@ -130,7 +130,7 @@ export default function Home() {
 							className="!mb-[0.625rem] max-w-md "
 						>
 							My journey in the developer realm is not just about pixels;
-							it&apos;s about understaing people, solving problemsm and creating
+							it&apos;s about understanding people, solving problems and creating
 							meaningful connections. I thrive on the intricacies of crafting
 							intuitive interfaces that resonates with users.
 						</motion.p>
