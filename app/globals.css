@@ -60,7 +60,6 @@
 body {
     color: var(--foreground);
     background-color: var(--background);
-    /* font-family: mons; */
 }
 
 @layer utilities {
@@ -111,7 +110,6 @@ body {
     height: var(--_menu-height);
     top: 50%;
     bottom: 50%;
-    left: 0;
     left: 0;
     transition: var(--_transition);
     transform: rotate(0);
